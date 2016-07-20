@@ -1,5 +1,5 @@
 {
-  "name": "newHandalTest",
+  "name": "newHandal",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,16 @@
     "ejs": "~2.3.3",
     "express": "~4.13.1",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+
+    "async": "^2.0.0-rc.6",
+    "connect-flash": "^0.1.1",
+    "express-session": "^1.13.0",
+    "mysql": "^2.11.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "*",
+    "passport-google-oauth": "*",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "*"
   }
 }
