@@ -1,0 +1,9 @@
+<% include error_header %>
+<h2>Error: <%= message %></h2>
+<% if (settings['verbose errors']) { %>
+  <pre><%= error.stack %></pre>
+<% } else { %>
+  <p>하아... 왜 또 에러가 터질까... 이건 또 무슨 에러인데...</p>
+  <p>분명 서버측에는 잘못이 없을겁니다... 아마도...</p>
+<% } %>
+<% include footer %>
