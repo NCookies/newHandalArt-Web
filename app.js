@@ -11,6 +11,7 @@ var flash = require('connect-flash');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var calendar = require('./routes/calendar');
 
 var http = require('http');
 
@@ -37,6 +38,7 @@ app.use('/vendor', express.static(path.join(__dirname, 'public/js/vendor')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/calendar', calendar);
 
 // catch 404 and forward to error handler ======================
 app.use(function(req, res, next) {
