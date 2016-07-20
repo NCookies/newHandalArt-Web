@@ -1,0 +1,91 @@
+.modal-title {
+    color: white;
+}
+.modal-header {
+    border-bottom: 0 !important;
+    padding: 0;
+    position: absolute;
+    /* left와 bottom을 각 css파일에 추가해 위치를 조정하도록 한다. */
+    left: 168.5px;
+    bottom: 110px;
+}
+.modal-header p{
+  font-size: 30px;
+}
+.layerpop input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    /*color:     #E3392B;*/
+    color: white;
+}
+.layerpop input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    /*color:     #E3392B;*/
+    color: white;
+    opacity: 1;
+}
+.layerpop input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    /*color:     #E3392B;*/
+    color: white;
+    opacity: 1;
+}
+.layerpop input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    /*color:     #E3392B;*/
+    color: white;
+}
+.layerpop .modal-dialog {
+    width: 450px;
+    height: auto;
+    padding-top: 100px;
+}
+.layerpop .modal-content {
+    height: inherit;
+    background-color: #2B2D42;
+}
+#siba {
+    background: url(/imgs/background.jpg);
+    background-size: cover;
+    border: 3px solid #EDF2F4;
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-50px);
+    border-radius: 100%;
+}
+.signup-inner {
+    border-bottom: 1px solid #504d4d;
+}
+.modal-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+}
+.modal-footer {
+    border-top: 0 !important;
+}
+#modal_sivbal {
+    margin-top: 55px;
+    border-bottom: none;
+    background-color: #e19851;
+    text-align: center;
+}
+.layerpop input {
+    color: white !important;
+    width: 344px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none;
+    border: none !important;
+    /*border-bottom: 2px solid white;*/
+    border-radius: 0px !important;
+    /*text-align: center;*/
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'NanumGothic';
+    margin-top: 5px;
+}
+.layerpop label {
+    color: white !important;
+    font-family: 'NanumGothic';
+}
