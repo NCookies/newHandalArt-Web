@@ -1,17 +1,290 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+	<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flew &mdash; Free HTML5 Bootstrap Website Template by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
 
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-    	<input type="file" name="uploadFile">
-		<input type="submit" name="Upload">
-    </form>
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-  </body>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="header-inner">
+				<h1><a href="index.html">한다라트</a></h1>
+				<nav role="navigation">
+					<ul>
+						<li><a href="views/bucket.ejs">버킷리스트</a></li>
+						<li><a href="views/mandal.ejs">만다라트</a></li>
+						<li><a href="views/calendar.ejs">달력</a></li>
+						<li class="cta"><a href="views/mypage.ejs">마이페이지</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+
+	</div>
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+			<!--백그라운드 이미지만 슬라이드쇼로 바뀌게-->
+		   	<li style="background-image: url(images/slide_1.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+					<div class="form">
+						
+						<ul class="tab-group">
+							<li class="tab active"><a href="#login">로그인</a></li>
+							<li class="tab"><a href="#signup">회원가입</a></li>
+						</ul>
+						
+						<div class="tab-content">
+							<div id="signup">    
+										<h1>반갑습니다!</h1>
+							<form action="/" method="post">
+							
+							<div class="field-wrap">
+								<label>
+								아이디<span class="req">*</span>
+								</label>
+								<input type="email"required autocomplete="off"/>
+							</div>          
+								
+							<div class="field-wrap">
+								<label>
+								이메일 / 분실 시 사용됩니다.<span class="req">*</span>
+								</label>
+								<input type="email"required autocomplete="off"/>
+							</div>
+							
+							<div class="field-wrap">
+								<label>
+								비밀번호<span class="req">*</span>
+								</label>
+								<input type="password"required autocomplete="off"/>
+							</div>
+								
+							<div class="field-wrap">
+								<label>
+								비밀번호 확인<span class="req">*</span>
+								</label>
+								<input type="password"required autocomplete="off"/>
+							</div>  
+								
+							<div class="field-wrap">
+								<label>
+								닉네임<span class="req">*</span>
+								</label>
+								<input type="email"required autocomplete="off"/>
+							</div>           
+							
+							<button type="submit" class="button button-block"/>회원가입</button>
+							
+							</form>
+
+							</div>
+							
+							<div id="login">   
+							<h1>반갑습니다!</h1>
+							
+							<form action="/" method="post">
+							
+								<div class="field-wrap">
+								<label>
+								아이디<span class="req">*</span>
+								</label>
+								<input type="email"required autocomplete="off"/>
+							</div>
+							
+							<div class="field-wrap">
+								<label>
+								비밀번호<span class="req">*</span>
+								</label>
+								<input type="password"required autocomplete="off"/>
+							</div>
+							
+							<p class="forgot"><a href="#">비밀번호를 잊으셨나요?</a></p>
+							<button class="button button-block"/>로그인</button>
+
+							
+							</form>
+
+							</div>
+							
+						</div><!-- tab-content -->
+						
+					</div> <!-- /form -->
+
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/slide_2.jpg);">
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Take Your Business To The Next Level</h2>
+		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/slide_3.jpg);">
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>We Think Different That Others Can't</h2>
+		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+	<div id="fh5co-services-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>주요기능</h2>
+					<p>버킷리스트로 장기목표를 세우고 만다라트로 추상적인 목표를 구체화, 체계화, 시각화합니다. 이것들을 달력과 연동하여 일정을 관리합니다.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-laptop"></i>
+						<div class="desc">
+							<h3>버킷리스트</h3>
+							<p>죽기 전에 이루고 싶은 목표</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-server"></i>
+						<div class="desc">
+							<h3>만다라트</h3>
+							<p>단계별 목표를 통한 세분화</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-money"></i>
+						<div class="desc">
+							<h3>달력</h3>
+							<p>월, 주, 일 단위로 하루를 계획</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-testimony-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>개발자 정보</h2>
+					<p>한다라트 개발자입니다.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-offset-0 to-animate">
+					<div class="wrap-testimony animate-box">
+						<div class="owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/person1.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+									</blockquote>
+									<span>Athan Smith, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/person2.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+									</blockquote>
+									<span>Nathalie Kosley, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/person3.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+									</blockquote>
+									<span>Yanna Kuzuki, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fh5co-cta" style="background-image: url(images/slide_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-12 text-center animate-box">
+				<h3>We Try To Update The Site Everyday</h3>
+				<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+
+	<script src="js/main.js"></script>
+	</body>
 </html>
+
