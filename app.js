@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var calendar = require('./routes/calendar');
 
 var http = require('http');
 
@@ -26,11 +25,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/vendor', express.static(path.join(__dirname, 'public/js/vendor')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/calendar', calendar);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -65,9 +62,9 @@ app.use(function(err, req, res, next) {
 
 /*
 http.createServer(app, '127.0.0.1', function(req, res) {
-	console.log(req.ip + 'was connected!');
+  console.log(req.ip + 'was connected!');
 }).listen(port, function() {
-	console.log('Port ' + port + ' is listening');
+  console.log('Port ' + port + ' is listening');
 });*/
 
 
