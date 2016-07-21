@@ -9,9 +9,16 @@ var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
 
+
 var index = require('./routes/index');
-var users = require('./routes/users');
+
+var bucket = require('./routes/bucket');
+var mandal = require('./routes/mandal'); 
 var calendar = require('./routes/calendar');
+
+var auth = require('./routes/auth');
+var profile = require('./routes/profile');
+
 
 var http = require('http');
 
@@ -37,13 +44,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/vendor', express.static(path.join(__dirname, 'public/js/vendor')));
 
 app.use('/', index);
-app.use('/users', users);
+
+app.use('/bucket', bucket);
+app.use('/mandal', mandal);
 app.use('/calendar', calendar);
+
+app.use('/auth', auth);
+app.use('/profile', profile);
+
+
 
 app.use(function(req, res) {
 	res.render('404', {
 		url: req.url
-	})
+	});
 });
 
 // catch 404 and forward to error handler ======================
