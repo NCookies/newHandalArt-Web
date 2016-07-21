@@ -112,6 +112,7 @@ $(document).ready(function(eventData)
 				});*/
 				//var newEvent = null;
 				//dragging = true;
+
 				var newEvent = {
 	   		        title: title,
 	   	    	    start: start,
@@ -119,7 +120,7 @@ $(document).ready(function(eventData)
 		   	        allDay: allDay		// 시간인식
 	    	    };
 
-	    	    console.log(newEvent);
+	    	    console.log(newEvent.start._d);
 
 				$('#calendar').fullCalendar('renderEvent', newEvent, 'stick');
 				$('#addModal').modal('hide');
@@ -152,6 +153,10 @@ $(document).ready(function(eventData)
   				event.title = title;
    				//event.title = event.changetitle;
 				$('#calendar').fullCalendar('updateEvent', event);
+
+				console.log(event);
+				console.log('[start] : ' + event.start._d);
+
 				$('#editModal').modal('hide');
    			});
 

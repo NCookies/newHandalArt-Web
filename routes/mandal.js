@@ -3,7 +3,6 @@ var router = express.Router();
 
 var fs = require('fs');
 
-
 router.get('/', function(req, res, next) {
   res.render('mandal');
 });
