@@ -3,17 +3,6 @@ function activate(e) {
   $wrapper
     .addClass('active')
     .siblings().addClass('inactive');
-  
-  $('td').on('click', function() {
-    // tab is move
-
-    // enter is complete edit
-
-    // can edit
-    console.log("ckouc");
-
-    // send database
-  });
 }
 
 function dismiss(e) {
