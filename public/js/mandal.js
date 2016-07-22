@@ -1,3 +1,11 @@
+   function funLoad(){
+		var Cheight = $(window).height()-500;
+		alert(Cheight);
+		$('#calendar').css({'height':Cheight+'px'});
+	}
+	//window.onload = funLoad;
+	//window.onresize = funLoad;
+  
 function activate(e) {
   var $wrapper = $(e.currentTarget).parent();
   $wrapper
@@ -32,3 +40,4 @@ $('article').on({
 });
 
 $('.dismiss').on('click', dismiss);
+
