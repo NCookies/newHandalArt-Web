@@ -3,6 +3,7 @@
 *::after { box-sizing: border-box; }
 
 .mandal-view-section {
+    position: fixed;     
     float: left;
     height: auto;
     width: 330px;
@@ -10,7 +11,7 @@
 
 .view-search {
     width: 100%;
-    height: 50px;
+    height: 30px;
     background-color: blueviolet;
 }
 
@@ -21,35 +22,41 @@
     padding-left: 30px;
     overflow-y: scroll;
     overflow-x: hidden;
-    border: 1px solid red;    
+    border: 1px solid red;  
 }
 
-.mandal-pallet {
-  background-color: green;
-  width: 100%;
-  height: 50px;
-}
 /*
 mandal-mandal
 */
 
 .mandal-container {
-    display: inline-block;
+    float: right;
     width: calc(100% - 330px);
     border: 1px solid red;
 }
 
+.mandal-pallet {
+    width: 100%;
+    height: 30px;
+    background-color: green;    
+}
+
+.mandal-mandal {
+    height: 78vh;
+    padding-top: 20px;
+    padding-left: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid red;    
+}
 
 .year {
-  margin: 0 0 8px;
   color: #548383;
   text-align: center;
   font-size: 1.5em;
-  padding-top: 1em;
 }
 
 .description {
-  margin: 0 0 20px;
   color: #acc2c2;
   text-align: center;
   font-size: 0.8em;
@@ -64,10 +71,14 @@ mandal-mandal
   list-style: none;
 }
 
+/* Safari/iOS fix: Adjusting both z-index and transform on <article>
+   causes text anti-aliasing to die within subsequent <article>
+   elements during the transition. Moving z-index to the parent <li>
+   fixes this. */
 .mandal-mandal li {
   position: relative;
   z-index: 1;
-  width: 30%;
+  width: 25%;
   height: 160px;
   transition: z-index;
   transition-delay: .4s;
@@ -82,9 +93,13 @@ article {
   cursor: pointer;
   transform: translate(-50%, -50%) scale(.25);
   transition: transform .4s;
-  border: 1px solid lightgrey;
 }
 
+/* Firefox fix: The outline style stretches to include absolutely
+   positioned child elements (in this case, the offset dismiss
+   button). This looks weird. The fix is to have a <div> with no
+   child elements, position it to have the same edges as <article>,
+   and apply the outline style there. */
 .outline {
   position: absolute;
   z-index: -1;
@@ -126,6 +141,31 @@ article:focus .outline {
   left: 50%;
   font: 1.7em/1 'FontAwesome';
   transform: translate(-50%, -50%);
+}
+
+.binding {
+  height: 40px;
+  background-color: #dab08c;
+}
+
+.binding::before,
+.binding::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.binding::before {
+  left: 25%;
+}
+
+.binding::after {
+  right: 25%;
 }
 
 article h1 {
@@ -181,12 +221,7 @@ td:empty {
   background-color: #548383;
 }
 
-.second-goal {
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.third-goal {
+.day {
   opacity: 0;
   font-size: 1.1em;
   font-weight: bold;
@@ -206,8 +241,14 @@ td:empty {
   transition: opacity .4s;
 }
 
+.notes {
+  width: 708px;
+  margin: 64px auto 0;
+  color: #548383;
+  line-height: 1.8;
+}
+
 .inactive {
-  opacity: 0;  
   pointer-events: none;
 }
 
