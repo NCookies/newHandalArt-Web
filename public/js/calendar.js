@@ -112,6 +112,7 @@ $(document).ready(function(eventData)
 				});*/
 				//var newEvent = null;
 				//dragging = true;
+
 				var newEvent = {
 	   		        title: title,
 	   	    	    start: start,
@@ -119,7 +120,7 @@ $(document).ready(function(eventData)
 		   	        allDay: !start.hasTime() && !end.hasTime()		// 시간인식
 	    	    };
 
-	    	    console.log(newEvent);
+	    	    console.log(newEvent.start._d);
 
 	    	    console.log("title :" + $('#calendar').fullCalendar("getView").title);
 	    	    console.log('start : ' + newEvent.start._d);		// 시간 얻어오는 방법
@@ -160,6 +161,10 @@ $(document).ready(function(eventData)
    				
    				//event.title = event.changetitle;
 				$('#calendar').fullCalendar('updateEvent', event);
+
+				console.log(event);
+				console.log('[start] : ' + event.start._d);
+
 				$('#editModal').modal('hide');
    			});
 
