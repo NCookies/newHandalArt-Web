@@ -1,19 +1,16 @@
+   function funLoad(){
+		var Cheight = $(window).height()-500;
+		alert(Cheight);
+		$('#calendar').css({'height':Cheight+'px'});
+	}
+	//window.onload = funLoad;
+	//window.onresize = funLoad;
+  
 function activate(e) {
   var $wrapper = $(e.currentTarget).parent();
   $wrapper
     .addClass('active')
     .siblings().addClass('inactive');
-  
-  $('td').on('click', function() {
-    // tab is move
-
-    // enter is complete edit
-
-    // can edit
-    console.log("ckouc");
-
-    // send database
-  });
 }
 
 function dismiss(e) {
@@ -43,3 +40,4 @@ $('article').on({
 });
 
 $('.dismiss').on('click', dismiss);
+
