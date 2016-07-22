@@ -1,6 +1,5 @@
 $(document).ready(function(eventData)
 {
-	// $("#calendar").html("");
 	/*
 		date store today date.
 		d store today date.
@@ -21,6 +20,7 @@ $(document).ready(function(eventData)
 	
 	var calendar = $('#calendar').fullCalendar(
 	{
+		height: 680,
 		lang: 'ko',
 		/*
 			header option will define our calendar header.
@@ -315,5 +315,5 @@ $(document).ready(function(eventData)
 		//var renderedData = new EJS({url:'/calendar/day'}).render({data: eventsArray});
 		$(".fc-view-agendaDay").load("/calendar/day");
 		//$(".fc-view-agendaDay").load("/calendar/day")
-	});
+	});	
 });
