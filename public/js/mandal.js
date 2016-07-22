@@ -1,10 +1,12 @@
-   function funLoad(){
-		var Cheight = $(window).height()-500;
-		alert(Cheight);
-		$('#calendar').css({'height':Cheight+'px'});
-	}
-	//window.onload = funLoad;
-	//window.onresize = funLoad;
+function funLoad() {
+  // 창 크기에 맞춰서 사이즈 조정
+	var Cheight = $(window).height()-500;
+	alert(Cheight);
+	$('#calendar').css({'height':Cheight+'px'});
+//아래는 실행시 필요
+//window.onload = funLoad;
+//window.onresize = funLoad;  
+}
   
 function activate(e) {
   var $wrapper = $(e.currentTarget).parent();
@@ -40,4 +42,3 @@ $('article').on({
 });
 
 $('.dismiss').on('click', dismiss);
-
