@@ -9298,7 +9298,7 @@ var Calendar = FC.Calendar = Class.extend({
 			end = start.clone().add(this.defaultAllDayEventDuration);
 		}
 
-		return { start: start, end: end };
+		return { start: start, end: end, allDay: allDay };
 	}
 
 });
@@ -9828,7 +9828,7 @@ function Calendar_constructor(element, overrides) {
 	
 
 	// this public method receives start/end dates in any format, with any timezone
-	function select(zonedStartInput, zonedEndInput) {
+	function select(zonedStartInput, zonedEndInput){
 		currentView.select(
 			t.buildSelectSpan.apply(t, arguments)
 		);

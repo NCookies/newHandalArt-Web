@@ -116,10 +116,15 @@ $(document).ready(function(eventData)
 	   		        title: title,
 	   	    	    start: start,
 		   	        end: end,
-		   	        allDay: allDay		// 시간인식
+		   	        allDay: !start.hasTime() && !end.hasTime()		// 시간인식
 	    	    };
 
 	    	    console.log(newEvent);
+
+	    	    console.log("title :" + $('#calendar').fullCalendar("getView").title);
+	    	    console.log('start : ' + newEvent.start._d);		// 시간 얻어오는 방법
+	    	    console.log("end : " + newEvent.end._d);
+	    	    console.log("allDay : " + allDay);
 
 				$('#calendar').fullCalendar('renderEvent', newEvent, 'stick');
 				$('#addModal').modal('hide');
@@ -128,7 +133,6 @@ $(document).ready(function(eventData)
 
 			title = $('#addTitle').val('');		// 앞에 썼던 title 내용 초기화, 나중에 썼던 title 내용이 지금까지 클릭했던 모든 날에 들어감
 		
-
 		// enter쳐도 일정 추가가능
 			$("#addModal")
 	            .off("keydown")
@@ -150,6 +154,10 @@ $(document).ready(function(eventData)
   			{
   				var title = $('#editTitle').val();
   				event.title = title;
+
+  				console.log('[start] : ' + event._start._d);		// 시작시간 얻어옴
+				console.log('[end] : ' + event._end._d);
+   				
    				//event.title = event.changetitle;
 				$('#calendar').fullCalendar('updateEvent', event);
 				$('#editModal').modal('hide');
@@ -166,23 +174,6 @@ $(document).ready(function(eventData)
 
  			title = $('#editTitle').val(event.title);			// title란에 기존에 입력했던 event의 이름이 나옴
 
- 			/*$("#detail").off('click').on("click", function(){
- 				$('detailModal').modal;
- 				({
- 					title: event.title,
- 					content: event.content
- 				});
-
- 				$("#editDetail").off('click').on("click", function()
- 				{
- 					// 수행해야 할 내용
-
- 					$('#detailModal').modal('hide');
- 				});
-
- 				$('#editModal').modal('hide');
- 			});*/
- 			
  			// enter쳐도 일정 수정가능
  			$("#editModal")
                 .off("keydown")
