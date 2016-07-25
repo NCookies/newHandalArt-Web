@@ -1,4 +1,4 @@
-$(document).ready(function(eventData)
+$(document).ready(function()
 {
 	// $("#calendar").html("");
 	/*

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>한다라트&mdash;</title>
+		<title>한다라트</title>
 		<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
 
 		<link rel="shortcut icon" href="/images/favicon.ico">
@@ -15,6 +15,8 @@
 		<link rel="stylesheet" href="/css/vendor/owl.theme.default.min.css">
 		<link rel="stylesheet" href="/css/style.css">
 
+		<link rel="stylesheet" href="/css/bucket.css">
+
 		<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="/js/vendor/jquery.min.js"></script>
 		<script src="/js/vendor/jquery.easing.1.3.js"></script>
@@ -23,65 +25,109 @@
 		<script src="/js/vendor/owl.carousel.min.js"></script>
 		<script src="/js/vendor/jquery.flexslider-min.js"></script>
 		<script src="/js/index.js"></script>
+
+		<script src="/js/vendor/endless-pagination.js"></script>		<!-- bucketlist.org에서 가져온 거임 => 버킷리스트 전용 -->
+		<script src="/js/bucket.js"></script>
 	</head>
 
 	<body>
 	<div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="header-inner">
-				<h1><a href="/">한다라트</a></h1>
-				<nav role="navigation">
-					<ul>
-						<li><a href="/bucket">버킷리스트</a></li>
-						<li><a href="/mandal">만다라트</a></li>
-						<li><a href="/calendar">달력</a></li>
-						<li class="cta"><a href="/profile">마이페이지</a></li>
-					</ul>
-				</nav>
+		<header id="fh5co-header" role="banner">
+			<div class="container">
+				<div class="header-inner">
+					<h1><a href="/">한다라트</a></h1>
+					<nav role="navigation">
+						<ul>
+							<li><a href="/bucket">버킷리스트</a></li>
+							<li><a href="/mandal">만다라트</a></li>
+							<li><a href="/calendar">달력</a></li>
+							<li class="cta"><a href="/profile">마이페이지</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
+	
+		<div class = "content-part">
+			<div id = "list-view-page">
+				<!-- 메뉴 -->
+				<ul id = "list-view-tab" class = "nav nav-tabs">
+				<!-- 진행 -->
+					<li class = "active" style = "text-align: center">
+						<a href = "#todo" data-toggle = "tab">
+							<span class = "number"></span><br>
+							<span class = "text">진행중인 목표</span>
+						</a>
+					<!-- 완료 -->
+					<li class style = "text-alige:center">
+						<a href = "#done" data-toggle = "tab">
+							<span class = "number"></span><br>
+							<span class = "text">완료한 목표</span>
+						</a>
+					</li>
+				</ul>
+				<!-- 목표 -->
+				<div id = "my-list">
+					<div id = "category_value" style = "display:none;">None
+					</div>
+					<div id = "list-view-content" class = "tab-content">
+						<!-- 진행 -->
+						<div class = "tab-pane fade endless_page_template active in" id = "todo">
+							<div class = "tab-header">
+								<div class = "tab-header-left">
+								</div>
+								<div class = "tab-header-right">
+									<div class = "btn-group">
+										<button id = "add-goal" class = "btn bucketblue">추가</button>
+									</div>
+								</div>
+								<div class = "clear">
+								</div>
+							</div>
+							<br>
+						</div>
+						<!-- 완료 -->
+						<div class = "tab-pane hide endless_page_template" id = "done">		<!-- 완료페이지에서 추가버튼 숨김 -->
+							<div class = "tab-header">
+								<div class = "tab-header-left">
+								</div>
+								<div class = "tab-header-right">
+									<div class = "btn-group">
+										<a href = "#" class = "btn bucketblue">추가</a>
+									</div>
+								</div>
+							</div>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<div id="fh5co-work-section" class="fh5co-light-grey-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(../public/images/image_1.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Web Application</h5>
-							</div>
-						</div>
-					</a>
+			<!-- 본문에 필요한 소스는 이 안에 입력하면 됨 -->
+			<div class = "modal fade layerpop" id = "addModal">
+				<div class = "modal-dialog">
+					<div class = "modal-header">
+						<h4 class = "modal-title">목표 설정</h4>
+					</div>
+					<div class = "modal-body">
+						<p>
+							<label>목표</label><br/>
+							<input type = "text" id = "addGoal" class = "span10" placeholder = "내용을 입력하세요" maxlength = "80"><br/>
+							<label>카테고리</label><br/>
+							<label>완료날짜</label><br/>
+							<!-- <input type =  달력띄워서 날짜선택-->
+							<label>사진</label><br/>
+							<!-- 사진선택 (드래그, 파일고르기) -->
+							<label>세부내용</label><br/>
+						</p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-primary" id = "add">추가</button>
+					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(../public/images/image_2.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">User Interface</h5>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(../public/images/image_3.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Branded</h5>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
+
+
 		</div>
-	</div>
-	</div>
-	</body>
+	</div>			
+	</body>						
 </html>

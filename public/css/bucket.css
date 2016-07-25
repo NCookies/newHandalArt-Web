@@ -1,0 +1,28 @@
+.content-part {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*background-color: #f4f4f4;*/		/* 본문부분 배경색 */
+}
+
+.tab-content .tab-header {
+    width: auto;
+    float: right;
+    position: relative;
+    top: -55px;			/* 버튼위치 지정해줌 */
+}
+
+.btn.bucketblue {
+    background: #3de4d3;
+    color: #fff;
+    border-color:#3de4d3;
+}
+
+.tab-content .item-list-view li.item-obj {
+    text-align: left!important;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
