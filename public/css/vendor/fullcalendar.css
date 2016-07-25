@@ -4,16 +4,8 @@
  * (c) 2016 Adam Shaw
  */
 
-body {
-	margin-top: 40px;
-	text-align: center;
-	font-size: 14px;
-	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-}
-
 #calendar {
-	height: 100%;
-	padding: 0 40px 0 40px;
+	width: 70%;
 	margin: 0 auto;
 }
 

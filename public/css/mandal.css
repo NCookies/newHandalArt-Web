@@ -1,6 +1,8 @@
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 .mandal-view-section {
     position: fixed;     
@@ -25,10 +27,6 @@
     border: 1px solid red;  
 }
 
-/*
-mandal-mandal
-*/
-
 .mandal-container {
     float: right;
     width: calc(100% - 330px);
@@ -50,19 +48,25 @@ mandal-mandal
     border: 1px solid red;    
 }
 
+.mandal-mandal a {
+  text-decoration: none;
+}
+
 .year {
+  margin: 0 0 8px;
   color: #548383;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .description {
+  margin: 0 0 30px;
   color: #acc2c2;
   text-align: center;
   font-size: 0.8em;
 }
 
-.mandal-mandal ul {
+.mandal-container ul {
   display: flex;
   flex-wrap: wrap;
   width: 740px;
@@ -71,14 +75,9 @@ mandal-mandal
   list-style: none;
 }
 
-/* Safari/iOS fix: Adjusting both z-index and transform on <article>
-   causes text anti-aliasing to die within subsequent <article>
-   elements during the transition. Moving z-index to the parent <li>
-   fixes this. */
-.mandal-mandal li {
+.mandal-container li {
   position: relative;
-  z-index: 1;
-  width: 25%;
+  width: 30%;
   height: 160px;
   transition: z-index;
   transition-delay: .4s;
@@ -95,11 +94,6 @@ article {
   transition: transform .4s;
 }
 
-/* Firefox fix: The outline style stretches to include absolutely
-   positioned child elements (in this case, the offset dismiss
-   button). This looks weird. The fix is to have a <div> with no
-   child elements, position it to have the same edges as <article>,
-   and apply the outline style there. */
 .outline {
   position: absolute;
   z-index: -1;
@@ -252,9 +246,6 @@ td:empty {
   pointer-events: none;
 }
 
-/* Chrome/Safari/iOS fix: Bumping up the z-index from the start of
-   the expand animation until the end of the shrink animation
-   prevents unnecessary repaints on subsequent <article> elements. */
 .active {
   z-index: 2;
   transition-delay: 0s;
