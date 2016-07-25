@@ -31,6 +31,8 @@
     float: right;
     width: calc(100% - 330px);
     border: 1px solid red;
+    font: 1em/1 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 .mandal-pallet {
@@ -42,7 +44,7 @@
 .mandal-mandal {
     height: 78vh;
     padding-top: 20px;
-    padding-left: 30px;
+    padding-left: 60px;
     overflow-y: scroll;
     overflow-x: hidden;
     border: 1px solid red;    
@@ -53,14 +55,14 @@
 }
 
 .year {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #548383;
   text-align: center;
   font-size: 2em;
 }
 
 .description {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   color: #acc2c2;
   text-align: center;
   font-size: 0.8em;
@@ -108,7 +110,7 @@ article:focus {
 }
 
 article:focus .outline {
-  outline: 4px solid #dab08c;
+  outline: 4px solid #27E1CE;
 }
 
 .dismiss {
@@ -135,31 +137,6 @@ article:focus .outline {
   left: 50%;
   font: 1.7em/1 'FontAwesome';
   transform: translate(-50%, -50%);
-}
-
-.binding {
-  height: 40px;
-  background-color: #dab08c;
-}
-
-.binding::before,
-.binding::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 8px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.binding::before {
-  left: 25%;
-}
-
-.binding::after {
-  right: 25%;
 }
 
 article h1 {
@@ -193,14 +170,14 @@ th::after {
   left: 0;
   width: 80px;
   height: 20px;
-  background-color: #acc2c2;
+  background-color: #000;
   transition: opacity .4s;
 }
 
 td {
   position: relative;
   width: 80px;
-  height: 64px;
+  height: 80px;
   padding: 4px;
   vertical-align: top;
   background-color: #dfe7e7;
@@ -245,7 +222,6 @@ td:empty {
 .inactive {
   pointer-events: none;
 }
-
 .active {
   z-index: 2;
   transition-delay: 0s;
@@ -275,13 +251,10 @@ li:nth-child(4n+4).active article {
   opacity: 1;
 }
 
-/* Chrome/Safari/iOS fix: The centered "Sun" text jumps to the right
-   when the transition ends. Oddly enough, setting text-indent to 0%
-   prevents this. */
 .active th {
   text-indent: 0%;
 }
 
 .active th::after {
   opacity: 0;
-}
+} 
