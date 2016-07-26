@@ -37,11 +37,12 @@ How to edit and update td value when double click Jquery
 http://jsfiddle.net/jFycy/
 V div class = 보이는 문제 해결
 ㄴhtml() -> text()
-V I 커서
+V 커서 I
 http://stackoverflow.com/questions/29519868/bootstrap-progress-bar-with-gradient-color-showing-proportionally-on-active-widt
-퍼센트 +,- 위치수정
+V td 클릭할 때마다 설정 폼이 보이게 수정
 
-꺼지는 문제, 
+
+꺼지는 문제,  특정 돋보기창에만 폼이 보이게
 아무것도 입력 안했을 때 td의 클래스=day가 없어짐.
 
 << 돋보기창 >>
@@ -80,7 +81,8 @@ _ 사용자가 색깔 선택 시, 만다라트의 색 바뀜
 << 만다라트 디자인 >>
 - 돋보기창 위치 가운데로
 - 클릭하기 전에는 목표 이름만
-- ul, li 조정해서 크기 수정'
+- ul, li 조정해서 크기 수정
+- 퍼센트 +,- 위치수정
 
 << 메인 디자인 수정 >>
 ㄴ_오류 수정

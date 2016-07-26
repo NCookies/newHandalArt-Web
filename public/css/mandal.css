@@ -278,6 +278,7 @@ li:nth-child(4n+4).active article {
   text-align: center;
   line-height: 31px;
 }
+
 .button {
   display: inline-block;
   padding: 15px 25px;
@@ -287,22 +288,19 @@ li:nth-child(4n+4).active article {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.button2:hover {background-color: #f44336}
-
+.button2:hover, .button2 {background-color: #f44336}
 .button2:active {
   background-color: #f44336;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-.button3:hover {background-color: #008CBA}
-
+.button3:hover, .button3 {background-color: #008CBA}
 .button3:active {
   background-color: #008CBA;
   box-shadow: 0 5px #666;
