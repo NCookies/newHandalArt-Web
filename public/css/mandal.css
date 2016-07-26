@@ -225,17 +225,37 @@ td:empty {
   transform: translate(-50%, -50%) scale(1);
 }
 
-li:nth-child(4n+1).active article {
-  transform: translate(calc(-50% + 220px), -50%) scale(1);
-}
-li:nth-child(4n+2).active article {
+li:nth-child(1).active article {
+  cursor: crosshair
   transform: translate(calc(-50% + 36px), -50%) scale(1);
 }
-li:nth-child(4n+3).active article {
-  transform: translate(calc(-50% - 36px), -50%) scale(1);
+li:nth-child(2).active article {
+  cursor: n-resize;
+  transform: translate(calc(-50% + 36px), -50%) scale(1);
 }
-li:nth-child(4n+4).active article {
-  transform: translate(calc(-50% - 220px), -50%) scale(1);
+li:nth-child(3).active article {
+  cursor: wait;
+  transform: translate(calc(-50% - 220px), -90%) scale(1);
+}
+li:nth-child(4).active article {
+  cursor: wait;
+  transform: translate(calc(-50% - 220px), -90%) scale(1);
+}
+li:nth-child(6).active article {
+  cursor: wait;
+  transform: translate(calc(-50% - 220px), -90%) scale(1);
+}
+li:nth-child(7).active article {
+  cursor: wait;
+  transform: translate(calc(calc(-50% + 220px), -90%) scale(1);
+}
+li:nth-child(8).active article {
+  cursor: wait;
+  transform: translate(calc(-50% - 220px), -90%) scale(1);
+}
+li:nth-child(9).active article {
+  cursor: wait;
+  transform: translate(calc(-50% - 220px), -90%) scale(1);
 }
 
 .active .dismiss,
@@ -255,8 +275,11 @@ li:nth-child(4n+4).active article {
 /* 달성률 */
 .progress {
   position: relative;
+  width: 400px;
   height: 31px;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), #5bc0de);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgb(255, 26, 26));
+  border-radius: 15px;
+  display: inline-block;
 }
 .amount {
   position: absolute;
@@ -264,11 +287,10 @@ li:nth-child(4n+4).active article {
   right: 0;
   height: 100%;
   transition: all 0.8s;
-  background: gray;
   width: 0;
 }
 .progress:before {
-  content: attr(data-amount)"% Complete";
+  content: attr(data-amount)"% 달성";
   position: absolute;
   top: 0;
   left: 0;
@@ -279,30 +301,11 @@ li:nth-child(4n+4).active article {
   line-height: 31px;
 }
 
-.button {
+.btn {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  height: 31px;
+  padding: 5px 10px;
+  font-size: 20px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-.button2:hover, .button2 {background-color: #f44336}
-.button2:active {
-  background-color: #f44336;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.button3:hover, .button3 {background-color: #008CBA}
-.button3:active {
-  background-color: #008CBA;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }

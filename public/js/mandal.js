@@ -26,8 +26,14 @@ function funLoad() {
   //window.onresize = funLoad;  
 }
 
-function activeEdit(e) {
-  console.log("실행");
+function activate(e) {
+  console.log($(this).index(this));
+  var $wrapper = $(e.currentTarget).parent();
+  $wrapper
+    .addClass('active')
+    .siblings().addClass('inactive');
+  
+$('td').on("click", function(e) {
   e.stopPropagation();
   var currentEle = $(this);
   var value = $(this).text();
@@ -40,16 +46,14 @@ function activeEdit(e) {
   $(currentEle).html('<input class="td_edit" data-amount="0" type="text" value="' + value + '" />');
   $(".td_edit").focus();
 
-  // 목표날짜 설정
-  //$(currentHead).html('<p>목표날짜: <input type="text" id="datepicker"></p>');
-
+  //$(".slider-text-inner")
   // 달성률 설정
   $(".slider-text-inner").html('<p>목표날짜: <input type="text" id="datepicker"></p>' +
+                  '달성률: <button id="decrease" class="btn btn-info">-</button>' +
                   '<div class="progress" data-amount="' + dataval + '">' +
-                  '달성률: <div class="amount"></div></div>' +
-                  '<button id="increase" class="button button2">+</button>' +
-                  '<button id="decrease" class="button button3">-</button>');
-
+                  '<div class="amount"></div></div>' +
+                  '<button id="increase" class="btn btn-danger">+</button>');
+    
     if (dataval < 100) {
         $('.progress .amount').css("width", 100 - dataval + "%");
     }
@@ -77,14 +81,8 @@ function activeEdit(e) {
         //입력폼 삭제
         $(".slider-text-inner").remove();
       }
-    });
-}
-
-function activate(e) {
-  var $wrapper = $(e.currentTarget).parent();
-  $wrapper
-    .addClass('active')
-    .siblings().addClass('inactive');
+    });    
+  });
 }
 
 function dismiss(e) {
@@ -99,7 +97,7 @@ function dismiss(e) {
 function checkKey(e) {
   var $wrapper = $(e.currentTarget).parent();
   var isActive = $wrapper.hasClass('active');
-  if (isActive && (e.keyCode === 13 || e.keyCode === 27)) {
+  if (isActive && e.keyCode === 27) {
     // active and hit enter or escape
     dismiss(e);
   } else if (!isActive && e.keyCode === 13) {
@@ -116,10 +114,7 @@ $(document).click(function(e) {
 
 $('article').on({ 
   'click': activate,
-});
-
-$('td').on({
-  'click': activeEdit
+  'keyup': checkKey
 });
 
 $('.dismiss').on('click', dismiss);

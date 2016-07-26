@@ -16,6 +16,7 @@ mandal-left-container	mandal-left-title	mandal-left-date	mandal-left-contents
 V 깃허브 파일 만들기
 ㄴ의외로 꽤 오래걸림. 관련 링크가 많고, 깃허브 파일들에 맞게 다시 재배치.
 _코드펜 참고해서 만다라트 제작
+http://codepen.io/lonekorean/pen/doXjJG
 V 9개의 표 제작
 
 0721_목_만다라트의 상단바
@@ -44,7 +45,7 @@ V td 클릭할 때마다 설정 폼이 보이게 수정
 
 꺼지는 문제,  특정 돋보기창에만 폼이 보이게
 아무것도 입력 안했을 때 td의 클래스=day가 없어짐.
-
+http://dolly77.tistory.com/5	띄어쓰기
 << 돋보기창 >>
 - 네모 누르면 편집 가능
 - 네모 누르면 위에 목표날짜, 퍼센트 입력하는 폼만 
