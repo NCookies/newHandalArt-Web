@@ -31,9 +31,18 @@ V 캘린더 크기 줄임
 V 1차 목표 돋보기창을 제외한 테이블 만다라트 칸으로 맞춤
 V 목표날짜 설정
 V 클릭 시 편집 진행중
-커서, 꺼지는 문제, div class = 보이는 문제
+
+0726_화
 How to edit and update td value when double click Jquery
 http://jsfiddle.net/jFycy/
+V div class = 보이는 문제 해결
+ㄴhtml() -> text()
+V I 커서
+http://stackoverflow.com/questions/29519868/bootstrap-progress-bar-with-gradient-color-showing-proportionally-on-active-widt
+퍼센트 +,- 위치수정
+
+꺼지는 문제, 
+아무것도 입력 안했을 때 td의 클래스=day가 없어짐.
 
 << 돋보기창 >>
 - 네모 누르면 편집 가능

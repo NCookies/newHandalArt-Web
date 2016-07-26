@@ -205,13 +205,6 @@ td:empty {
   right: 4px;
 }
 
-.holiday {
-  opacity: 0;
-  margin-top: 8px;
-  font-size: .8em;
-  transition: opacity .4s;
-}
-
 .notes {
   width: 708px;
   margin: 64px auto 0;
@@ -258,3 +251,60 @@ li:nth-child(4n+4).active article {
 .active th::after {
   opacity: 0;
 } 
+
+/* 달성률 */
+.progress {
+  position: relative;
+  height: 31px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), #5bc0de);
+}
+.amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.8s;
+  background: gray;
+  width: 0;
+}
+.progress:before {
+  content: attr(data-amount)"% Complete";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  text-align: center;
+  line-height: 31px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button2:hover {background-color: #f44336}
+
+.button2:active {
+  background-color: #f44336;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button3:hover {background-color: #008CBA}
+
+.button3:active {
+  background-color: #008CBA;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

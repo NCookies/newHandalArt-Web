@@ -51,103 +51,45 @@
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
 			<!--백그라운드 이미지만 슬라이드쇼로 바뀌게-->
-		   	<li style="background-image: url(images/slide_1.jpg);">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-					<div class="form">
-						<!--sass 적용해야 함-->
-						<ul class="tab-group">
-							<li class="tab active"><a href="#login">로그인</a></li>
-							<li class="tab"><a href="#signup">회원가입</a></li>
-						</ul>
-						
-						<div class="tab-content">
-							<div id="signup">    
-										<h1>반갑습니다!</h1>
-							<form action="/" method="post">
-							
-							<div class="field-wrap">
-								<label>
-								아이디<span class="req">*</span>
-								</label>
-								<input type="email"required autocomplete="off"/>
-							</div>          
-								
-							<div class="field-wrap">
-								<label>
-								이메일 / 분실 시 사용됩니다.<span class="req">*</span>
-								</label>
-								<input type="email"required autocomplete="off"/>
-							</div>
-							
-							<div class="field-wrap">
-								<label>
-								비밀번호<span class="req">*</span>
-								</label>
-								<input type="password"required autocomplete="off"/>
-							</div>
-								
-							<div class="field-wrap">
-								<label>
-								비밀번호 확인<span class="req">*</span>
-								</label>
-								<input type="password"required autocomplete="off"/>
-							</div>  
-								
-							<div class="field-wrap">
-								<label>
-								닉네임<span class="req">*</span>
-								</label>
-								<input type="email"required autocomplete="off"/>
-							</div>           
-							
-							<button type="submit" class="button button-block"/>회원가입</button>
-							
-							</form>
-
-							</div>
-							
-							<div id="login">   
-							<h1>반갑습니다!</h1>
-							
-							<form action="/" method="post">
-							
-								<div class="field-wrap">
-								<label>
-								아이디<span class="req">*</span>
-								</label>
-								<input type="email"required autocomplete="off"/>
-							</div>
-							
-							<div class="field-wrap">
-								<label>
-								비밀번호<span class="req">*</span>
-								</label>
-								<input type="password"required autocomplete="off"/>
-							</div>
-							
-							<p class="forgot"><a href="#">비밀번호를 잊으셨나요?</a></p>
-							<button class="button button-block"/>로그인</button>
-
-							
-							</form>
-
-							</div>
-							
-						</div><!-- tab-content -->
-						
-					</div> <!-- /form -->
-
-		   			</div>
-		   		</div>
-		   	</li>
 		   	<li style="background-image: url(images/slide_2.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-		   				<div class="slider-text-inner">
-		   					<h2>Take Your Business To The Next Level</h2>
-		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
+						<!--회원가입 폼 // ㅈㅅ 잘해보셈
+						https://codepen.io/THEORLAN2/pen/mPLPwj -->
+						<div class="cont_principal">
+
+						<div class="cont_centrar">
+						<div class="cont_login">
+							<form action="">
+							<div class="cont_tabs_login">
+							<ul class='ul_tabs'>
+								<li class="active"><a href="#" onclick="sign_in()">로그인</a>
+								<span class="linea_bajo_nom"></span>
+								</li>
+								<li><a href="#up" onclick="sign_up()">회원가입</a><span class="linea_bajo_nom"></span>
+								</li>
+							</ul>
+							</div>
+						<div class="cont_text_inputs">
+							<input type="text" class="input_form_sign " placeholder="이메일/비밀번호 분실시 사용됩니다." name="id_us" />
+							
+							<input type="text" class="input_form_sign d_block active_inp" placeholder="아이디" name="emauil_us" />
+
+							<input type="password" class="input_form_sign d_block  active_inp" placeholder="비밀번호" name="pass_us" />  
+						<input type="password" class="input_form_sign" placeholder="비밀번호 확인" name="conf_pass_us" />
+							
+							<input type="text" class="input_form_sign " placeholder="닉네임" name="nick_us" />
+							
+							<a href="#" class="link_forgot_pass d_block" >비밀번호를 잊으셨나요?</a>   
+							</div>
+						<div class="cont_btn">
+							<button class="btn_sign">로그인</button>
+							
+							</div>
+							
+							</form>
+							</div>
+						</div>
 		   				</div>
 		   			</div>
 		   		</div>

@@ -81,6 +81,7 @@
 			<div class="mandal-mandal">
 				<h1 class="year">&mdash; 만다라트이름 &mdash;</h1>
 				<h2 class="description">세부섦ㅇ</h2>
+				<div id="mandal-tables">
 				<ul>
 					<!--tr: 줄 구분, td: 칸 구분 / day: 회색, holiday: 청록색 -->
 					<li>
@@ -91,8 +92,13 @@
 						<table>
 							<thead>
 								<tr>
-									<p>목표날짜: <input type="text" id="datepicker"></p>
-									<p>달성현황: <input type="text" id="datepicker"></p>
+<p>목표날짜: <input type="text" id="datepicker"></p>
+<div class="progress" data-amount="0">
+  달성률: <div class="amount"></div>
+</div>
+
+<button id="increase" class="button button2">+</button>
+<button id="decrease" class="button button3">-</button>	
 								</tr>
 							</thead>
 						<tr>
@@ -130,7 +136,6 @@
 							<td><div class="day">3-1</div></td>
 							<td class="is-holiday">
 							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
 							</td>
 							<td><div class="day">20</div></td>
 						</tr>
@@ -157,90 +162,6 @@
 							<td><div class="day">3-1</div></td>
 							<td class="is-holiday">
 							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
-							</td>
-							<td><div class="day">20</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-				</ul>
-				<ul>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">3-1</div></td>
-							<td class="is-holiday">
-							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
-							</td>
-							<td><div class="day">20</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">3-1</div></td>
-							<td class="is-holiday">
-							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
-							</td>
-							<td><div class="day">20</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-						<tr>
-							<td><div class="day">25</div></td>
-							<td><div class="day">26</div></td>
-							<td><div class="day">27</div></td>
-						</tr>
-						<tr>
-							<td><div class="day">3-1</div></td>
-							<td class="is-holiday">
-							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
 							</td>
 							<td><div class="day">20</div></td>
 						</tr>
@@ -269,7 +190,6 @@
 							<td><div class="day">3-1</div></td>
 							<td class="is-holiday">
 							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
 							</td>
 							<td><div class="day">20</div></td>
 						</tr>
@@ -296,7 +216,86 @@
 							<td><div class="day">3-1</div></td>
 							<td class="is-holiday">
 							<div class="day">3-2</div>
-							<div class="holiday">MLK Day</div>
+							</td>
+							<td><div class="day">20</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						</table>
+					</article>
+					</li>
+					<li>
+					<article tabindex="0">
+						<div class="outline"></div>
+						<div class="dismiss"></div>
+						<h1>2-1목표</h1>
+						<table>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">3-1</div></td>
+							<td class="is-holiday">
+							<div class="day">3-2</div>
+							</td>
+							<td><div class="day">20</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						</table>
+					</article>
+					</li>
+				</ul>
+				<ul>
+					<li>
+					<article tabindex="0">
+						<div class="outline"></div>
+						<div class="dismiss"></div>
+						<h1>2-1목표</h1>
+						<table>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">3-1</div></td>
+							<td class="is-holiday">
+							<div class="day">3-2</div>
+							</td>
+							<td><div class="day">20</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						</table>
+					</article>
+					</li>
+					<li>
+					<article tabindex="0">
+						<div class="outline"></div>
+						<div class="dismiss"></div>
+						<h1>2-1목표</h1>
+						<table>
+						<tr>
+							<td><div class="day">25</div></td>
+							<td><div class="day">26</div></td>
+							<td><div class="day">27</div></td>
+						</tr>
+						<tr>
+							<td><div class="day">3-1</div></td>
+							<td class="is-holiday">
+							<div class="day">3-2</div>
 							</td>
 							<td><div class="day">20</div></td>
 						</tr>
@@ -323,7 +322,6 @@
 							<td><div class="day"></div></td>
 							<td class="is-holiday">
 							<div class="day"></div>
-							<div class="holiday"></div>
 							</td>
 							<td><div class="day"></div></td>
 						</tr>
@@ -336,6 +334,7 @@
 					</article>
 					</li>
 				</ul>
+			</div>
 			</div>
 		</div>
 	</div>

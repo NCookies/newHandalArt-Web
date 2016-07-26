@@ -16,21 +16,6 @@ $( function() {
   });
 });
 
-function tdEdit(e) {
-  e.stopPropagation();
-  var currentEle = $(this);
-  $(this).empty();
-  var value = $(this).html();
-    
-  $(currentEle).html('<input class="thVal" type="text" value="' + value + '" />');
-  //$(".thVal").focus();
-  $(".thVal").keyup(function (event) {
-    if (event.keyCode == 13) {
-      $(currentEle).html($(".thVal").val().trim());
-    }
-  });
-}
-
 function funLoad() {
   // 창 크기에 맞춰서 사이즈 조정
   var Cheight = $(window).height()-500;
@@ -40,7 +25,40 @@ function funLoad() {
   //window.onload = funLoad;
   //window.onresize = funLoad;  
 }
+
+function activeEdit(e) {
+  e.stopPropagation();
+  var currentEle = $(this);
+  var value = $(this).text();
   
+  $(currentEle).html('<input class="td_edit" type="text" value="' + value + '" />');
+  $(".td_edit").focus();
+  $(".td_edit").keyup(function (event) {
+  if (event.keyCode == 13) //공백 제거
+    $(currentEle).html($(".td_edit").val());
+  });
+
+  var dataval = parseInt($('.progress').attr("data-amount"));
+    if (dataval < 100) {
+        $('.progress .amount').css("width", 100 - dataval + "%");
+    }
+
+    // 달성률 체크
+    $('#increase').click(function () {
+        modifyProgressVal(1);
+    });
+    $('#decrease').click(function () {
+        modifyProgressVal(-1);
+    });
+    function modifyProgressVal(type) {
+        dataval = parseInt($('.progress').attr("data-amount"));
+        if (type == 1) dataval = Math.min(100,dataval + 10)
+        else if (type == -1) dataval = Math.max(0,dataval - 10);
+        $('.progress .amount').css("width", 100 - dataval + "%");
+        $('.progress').attr("data-amount", dataval);
+    }
+}
+
 function activate(e) {
   var $wrapper = $(e.currentTarget).parent();
   $wrapper
@@ -49,7 +67,9 @@ function activate(e) {
 }
 
 function dismiss(e) {
-  var $wrapper = $(e.currentTarget).closest('li');
+  console.log("dismiss");
+  var $wrapper = $(e.currentTarget).closest('li'); 
+  console.log(e.currentTarget);
   $wrapper
     .removeClass('active')
     .siblings().removeClass('inactive');
@@ -68,14 +88,18 @@ function checkKey(e) {
   }
 }
 
-$('article').on({
+$(document).click(function(e) { 
+  // article 밖을 클릭하면 제거
+  if($(e.target).closest("#mandal-tables").attr("id") != "mandal-tables") 
+    dismiss(e);
+});    
+
+$('article').on({ 
   'click': activate,
-  'blur': dismiss
 });
 
 $('td').on({
-  'click': tdEdit,
-  'keyup': checkKey
+  'click': activeEdit
 });
 
 $('.dismiss').on('click', dismiss);
