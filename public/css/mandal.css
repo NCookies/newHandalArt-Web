@@ -71,7 +71,7 @@
 .mandal-container ul {
   display: flex;
   flex-wrap: wrap;
-  width: 740px;
+  width: 500px;
   margin: -14px auto -14px;
   padding: 0;
   list-style: none;
@@ -80,7 +80,7 @@
 .mandal-container li {
   position: relative;
   width: 30%;
-  height: 160px;
+  height: 140px;
   transition: z-index;
   transition-delay: .4s;
 }
@@ -223,7 +223,7 @@ td:empty {
 .active article {
   cursor: auto;
   position: fixed;
-  transform: translate(-20%, -35%) scale(1);
+  transform: translate(-20%, -45%) scale(1);
 }
 
 .active .dismiss,
@@ -238,7 +238,7 @@ td:empty {
 
 .active th::after {
   opacity: 0;
-} 
+}
 
 /* 달성률 */
 .progress {
@@ -248,6 +248,9 @@ td:empty {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgb(255, 26, 26));
   border-radius: 15px;
   display: inline-block;
+}
+.slider-text-inner p {
+  margin-bottom: 5px;
 }
 .amount {
   position: absolute;
