@@ -222,40 +222,8 @@ td:empty {
 
 .active article {
   cursor: auto;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-li:nth-child(1).active article {
-  cursor: crosshair
-  transform: translate(calc(-50% + 36px), -50%) scale(1);
-}
-li:nth-child(2).active article {
-  cursor: n-resize;
-  transform: translate(calc(-50% + 36px), -50%) scale(1);
-}
-li:nth-child(3).active article {
-  cursor: wait;
-  transform: translate(calc(-50% - 220px), -90%) scale(1);
-}
-li:nth-child(4).active article {
-  cursor: wait;
-  transform: translate(calc(-50% - 220px), -90%) scale(1);
-}
-li:nth-child(6).active article {
-  cursor: wait;
-  transform: translate(calc(-50% - 220px), -90%) scale(1);
-}
-li:nth-child(7).active article {
-  cursor: wait;
-  transform: translate(calc(calc(-50% + 220px), -90%) scale(1);
-}
-li:nth-child(8).active article {
-  cursor: wait;
-  transform: translate(calc(-50% - 220px), -90%) scale(1);
-}
-li:nth-child(9).active article {
-  cursor: wait;
-  transform: translate(calc(-50% - 220px), -90%) scale(1);
+  position: fixed;
+  transform: translate(-20%, -35%) scale(1);
 }
 
 .active .dismiss,
