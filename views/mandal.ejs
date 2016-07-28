@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-	<html class="no-js">
+	<html ng-app="app" class="no-js">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>한다라트 만다라트</title>
-		<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
 
 		<link rel="shortcut icon" href="/images/favicon.ico">
 		<link rel="stylesheet" href="/css/vendor/animate.css">
@@ -24,10 +23,12 @@
 		<script src="/js/vendor/owl.carousel.min.js"></script>
 		<script src="/js/vendor/jquery.flexslider-min.js"></script>
 		<script src='/js/vendor/jquery-ui-1.10.2.custom.min.js'></script>	
+		<script src='/js/vendor/angular.min.js'></script>	  
 		<script src="/js/index.js"></script>			
+	  	<script src="/js/mandal.js"></script>
 	</head>
 
-	<body>
+	<body ng-controller="Ctrl">
 	<div id="fh5co-page">
 		<header id="fh5co-header" role="banner">
 			<div class="container">
@@ -44,14 +45,16 @@
 				</div>
 			</div>
 		</header>
-	
-		<div class="mandal-view-section">
+		
+		<div class="mandal-container">
+		<div class="mandal-view">
 			<div class="view-search">
 			</div>
 			<div class="view-box">
 				<div class="box-object">
 					<div class="box-title">
-						title
+						5.five
+						{{contents[4].five}}
 					</div>
 					<div class="box-date">
 						date
@@ -75,285 +78,51 @@
 			</div>
 		</div>	
 
-        <div class="mandal-container">
+        <div class="mandal-mandal">
 			<div class="mandal-pallet">
 			</div> 
-			<div class="mandal-mandal">
-				<h1 class="year">&mdash; 만다라트이름 &mdash;</h1>
-				<h2 class="description">세부섦ㅇ</h2>
-				<div id="mandal-tables">
-				<ul>
-					<!--tr: 줄 구분, td: 칸 구분 / day: 회색, holiday: 청록색 -->
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
+			<div class="mandal-table">
+				<h1 class="title">{{title}}</h1>
+				<h2 class="description">{{description}}</h2>
+				<table class="table table-bordered">
+					<tbody>
+						<tr ng-repeat="content in model.contents" ng-include="getTemplate(content)">
 						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-				</ul>
-				<ul>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-				</ul>
-				<ul>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-					<li>
-					<article tabindex="0">
-						<div class="outline"></div>
-						<div class="dismiss"></div>
-						<h1>2-1목표</h1>
-						<table>
-							<thead>
-							  <div class="slider-text-inner"> </div>
-							</thead>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td class="is-holiday">
-							<div class="day"></div>
-							</td>
-							<td><div class="day"></div></td>
-						</tr>
-						<tr>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-							<td><div class="day"></div></td>
-						</tr>
-						</table>
-					</article>
-					</li>
-				</ul>
-			</div>
+					</tbody>
+				</table>
+				
+				<script type="text/ng-template" id="display">
+					<td>{{content.one}}</td>
+					<td>{{content.two}}</td>
+					<td>{{content.three}}</td>
+					<td>{{content.four}}</td>
+					<td>{{content.five}}</td>
+					<td>{{content.six}}</td>
+					<td>{{content.seven}}</td>
+					<td>{{content.eight}}</td>
+					<td>{{content.nine}}</td>
+					<td>
+					<button ng-click="editContent(content)" class="btn btn-primary">수정</button>
+					</td>
+				</script>
+				<script type="text/ng-template" id="edit">
+					<td><input type="text" ng-model="model.selected.one"/></td>
+					<td><input type="text" ng-model="model.selected.two"/></td>
+					<td><input type="text" ng-model="model.selected.three"/></td>
+					<td><input type="text" ng-model="model.selected.four"/></td>
+					<td><input type="text" ng-model="model.selected.five"/></td>
+					<td><input type="text" ng-model="model.selected.six"/></td>
+					<td><input type="text" ng-model="model.selected.seven"/></td>
+					<td><input type="text" ng-model="model.selected.eight"/></td>
+					<td><input type="text" ng-model="model.selected.nine"/></td>
+					<td>
+						<button ng-click="saveContent($index)" class="btn btn-success">완료</button>
+						<button ng-click="reset()" class="btn btn-danger">취소</button>
+					</td>
+				</script>
 			</div>
 		</div>
+		</div>
 	</div>
-	<script src="/js/mandal.js"></script>
 	</body>
 </html> 	

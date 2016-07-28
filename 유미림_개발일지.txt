@@ -42,9 +42,18 @@ V 커서 I
 http://stackoverflow.com/questions/29519868/bootstrap-progress-bar-with-gradient-color-showing-proportionally-on-active-widt
 V td 클릭할 때마다 설정 폼이 보이게 수정
 
+0728_목
+V Angular.js table 이용
+V 기본 틀 완성
+V 행마다 편집, 완료
 
-꺼지는 문제,  특정 돋보기창에만 폼이 보이게
-아무것도 입력 안했을 때 td의 클래스=day가 없어짐.
+1. 전체 수정, 완료
+2. 특정 칸의 css나 값 불러오기 (상단바 띄울 때 사용)
+3. 링크 걸기
+4. 테이블과 캔버스 화살표가 같이 되는지 보기 (파레트 띄울 때 색깔 같이 바뀌게)
+안되면 이미지
+5. 상단바 overflow-x 확인
+
 http://dolly77.tistory.com/5	띄어쓰기
 << 돋보기창 >>
 - 네모 누르면 편집 가능
