@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="/css/vendor/flexslider.css">
 		<link rel="stylesheet" href="/css/vendor/owl.carousel.min.css">
 		<link rel="stylesheet" href="/css/vendor/owl.theme.default.min.css">
+		<link rel="stylesheet" href="/css/vendor/xeditable.css">
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/mandal.css">
 
@@ -24,6 +25,7 @@
 		<script src="/js/vendor/jquery.flexslider-min.js"></script>
 		<script src='/js/vendor/jquery-ui-1.10.2.custom.min.js'></script>	
 		<script src='/js/vendor/angular.min.js'></script>	  
+		<script src='/js/vendor/xeditable.min.js'></script>	  
 		<script src="/js/index.js"></script>			
 	  	<script src="/js/mandal.js"></script>
 	</head>
@@ -49,12 +51,13 @@
 		<div class="mandal-container">
 		<div class="mandal-view">
 			<div class="view-search">
+				<input st-search="" class="form-control" placeholder="만다라트 검색" type="text"/>
+				<button type="button" class="glyphicon glyphicon-plus"></button>
 			</div>
 			<div class="view-box">
 				<div class="box-object">
 					<div class="box-title">
 						5.five
-						{{contents[4].five}}
 					</div>
 					<div class="box-date">
 						date
@@ -82,44 +85,25 @@
 			<div class="mandal-pallet">
 			</div> 
 			<div class="mandal-table">
-				<h1 class="title">{{title}}</h1>
-				<h2 class="description">{{description}}</h2>
+				<h1 class="title" href="#" editable-text="user.title">{{ user.title || '만다라트 이름' }}</h1>
+				<h2 class="description" href="#" editable-textarea="user.desc" e-rows="7" e-cols="20">
+					<pre>{{ user.desc || '만다라트 상세설명' }}</pre></h2>
+
 				<table class="table table-bordered">
 					<tbody>
-						<tr ng-repeat="content in model.contents" ng-include="getTemplate(content)">
+						<tr ng-repeat="row in mandal">
+						<td><a href="#" editable-text="row.one" data-e-style="width:90px; height:28px;">{{ row.one || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.two" data-e-style="width:90px; height:28px;">{{ row.two || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.three" data-e-style="width:90px; height:28px;">{{ row.three || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.four" data-e-style="width:90px; height:28px;">{{ row.four || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.five" data-e-style="width:90px; height:28px;">{{ row.five || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.six" data-e-style="width:90px; height:28px;">{{ row.six || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.seven" data-e-style="width:90px; height:28px;">{{ row.seven || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.eight" data-e-style="width:90px; height:28px;">{{ row.eight || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.nine" data-e-style="width:90px; height:28px;">{{ row.nine || '쓰기' }}</a></td>
 						</tr>
 					</tbody>
 				</table>
-				
-				<script type="text/ng-template" id="display">
-					<td>{{content.one}}</td>
-					<td>{{content.two}}</td>
-					<td>{{content.three}}</td>
-					<td>{{content.four}}</td>
-					<td>{{content.five}}</td>
-					<td>{{content.six}}</td>
-					<td>{{content.seven}}</td>
-					<td>{{content.eight}}</td>
-					<td>{{content.nine}}</td>
-					<td>
-					<button ng-click="editContent(content)" class="btn btn-primary">수정</button>
-					</td>
-				</script>
-				<script type="text/ng-template" id="edit">
-					<td><input type="text" ng-model="model.selected.one"/></td>
-					<td><input type="text" ng-model="model.selected.two"/></td>
-					<td><input type="text" ng-model="model.selected.three"/></td>
-					<td><input type="text" ng-model="model.selected.four"/></td>
-					<td><input type="text" ng-model="model.selected.five"/></td>
-					<td><input type="text" ng-model="model.selected.six"/></td>
-					<td><input type="text" ng-model="model.selected.seven"/></td>
-					<td><input type="text" ng-model="model.selected.eight"/></td>
-					<td><input type="text" ng-model="model.selected.nine"/></td>
-					<td>
-						<button ng-click="saveContent($index)" class="btn btn-success">완료</button>
-						<button ng-click="reset()" class="btn btn-danger">취소</button>
-					</td>
-				</script>
 			</div>
 		</div>
 		</div>

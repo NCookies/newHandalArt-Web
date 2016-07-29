@@ -1,120 +1,90 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ["xeditable"]);
 
-app.controller("Ctrl",
+app.run(function(editableOptions) {
+  editableOptions.theme = 'bs3';
+});
 
-function Ctrl($scope) {
-    $scope.title = "만다라트 이름";
-    $scope.description = "세부 설명";
-    $scope.model = {
-        contents: [{
-            id: 1,
-            one: "Ben",
-            two: 28,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 2,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 3,
-            one: "John",
-            two: 32
-        }, {
-            id: 4,
-            one: "Jane",
-            two: 40
-        }, {
-            id: 5,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 6,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 7,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 8,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }, {
-            id: 9,
-            one: "Sally",
-            two: 24,
-            three: 200,
-            four: "djk",
-            five: "33ff",
-            six: "sdf",
-            seven: "39rfj",
-            eight: "asdf",
-            nine: "dsfs"
-        }],
-        selected: {}
-    };
+app.controller('Ctrl', function($scope, $filter) {
+  $scope.user = {
+    title: '만다라트 이름',
+    desc: '해당 만다라트의 세부내용을 입력해주세요.'
+  };
 
-    // gets the template to ng-include for a table row / item
-    $scope.getTemplate = function (content) {
-        // 전달받은 아이디와 같은 아이디만 수정, 아니면 보여주기
-        if (content.id === $scope.model.selected.id) return 'edit';
-        else return 'display';
-    };
-
-    $scope.editContent = function (content) {
-        // 임시로 선택된 모델의 내용을 저장
-        $scope.model.selected = angular.copy(content);
-    };
-
-    $scope.saveContent = function (idx) {
-        console.log("Saving content");
-        $scope.model.contents[idx] = angular.copy($scope.model.selected);
-        $scope.reset();
-    };
-
-    $scope.reset = function () {
-        // 선택된 모델을 리셋
-        $scope.model.selected = {};
-    };
+  $scope.mandal = [{
+    one: 'oen',
+    two: 'two',
+    three: 'three',
+    four: 'four',
+    five: 'five',
+    six: 'six',
+    seven: 'seven',
+    eight: 8,
+    nine: 9
+  },{
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }, {
+    one: "John",
+    two: 32
+  }, {
+    one: "Jane",
+    two: 40
+  }, {
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }, {
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }, {
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }, {
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }, {
+    one: "Sally",
+    two: 24,
+    three: 200,
+    four: "djk",
+    five: "33ff",
+    six: "sdf",
+    seven: "39rfj",
+    eight: "asdf",
+    nine: "dsfs"
+  }];
 });

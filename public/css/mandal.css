@@ -69,3 +69,5 @@
   cursor: pointer;
   border-radius: 15px;
 }
+
+div[ng-app] { margin: 50px; }
