@@ -10,84 +10,86 @@ app.controller('Ctrl', function($scope, $filter) {
     desc: ''
   };
 
-  $scope.mandal = [{
-    one: 'oen',
-    two: 'two',
-    three: 'three',
-    four: 'four',
-    five: 'five',
-    six: 'six',
-    seven: 'seven',
-    eight: 8,
-    nine: 9
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
-  }, {
-    one: "John",
-    two: 32
-  }, {
-    one: "Jane",
-    two: 40
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
-  }, {
-    one: "Sally",
-    two: 24,
-    three: 200,
-    four: "djk",
-    five: "33ff",
-    six: "sdf",
-    seven: "39rfj",
-    eight: "asdf",
-    nine: "dsfs"
+  $scope.contents = [{  
+    mandal_col1: 'oen',
+    mandal_col2: 'two',
+    mandal_col3: 'three',
+    mandal_col4: 'four',
+    mandal_col5: 'five',
+    mandal_col6: 'six',
+    mandal_col7: 'seven',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: '1234',
+    mandal_col2: 't2345wo',
+    mandal_col3: 'th456ree',
+    mandal_col4: '45',
+    mandal_col5: '4',
+    mandal_col6: '4',
+    mandal_col7: '4',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'oen',
+    mandal_col2: 'two',
+    mandal_col3: 'three',
+    mandal_col4: 'four',
+    mandal_col5: 'five',
+    mandal_col6: 'six',
+    mandal_col7: 'seven',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'oen',
+    mandal_col2: 'two',
+    mandal_col3: 'three',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'oen',
+    mandal_col2: 'two',
+    mandal_col3: 'three',
+    mandal_col4: 'four',
+    mandal_col5: 'five'
+  }, {  
+    mandal_col5: 'five',
+    mandal_col6: 'six',
+    mandal_col7: 'seven',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'oen',
+    mandal_col2: 'two',
+    mandal_col3: 'fgdg',
+    mandal_col4: 'fdg',
+    mandal_col5: 'cc',
+    mandal_col6: 'ww',
+    mandal_col7: 'seven',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'fggf',
+    mandal_col2: 'two',
+    mandal_col3: 'three',
+    mandal_col4: 'fgg',
+    mandal_col5: 'five',
+    mandal_col6: 'adf',
+    mandal_col7: 'xg',
+    mandal_col8: 8,
+    mandal_col9: 9
+  }, {  
+    mandal_col1: 'oen',
+    mandal_col3: 'three',
+    mandal_col4: 'four',
+    mandal_col5: 'five',
+    mandal_col6: 'six',
+    mandal_col8: 8,
+    mandal_col9: 'sdfs'
   }];
 });
+
+
 /*
 
 	Bubble color picker
@@ -96,7 +98,6 @@ app.controller('Ctrl', function($scope, $filter) {
 	Have fun with it!
 
 */
-
 var colorPicker = (function(){
 	
 	var config = {

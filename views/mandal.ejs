@@ -57,25 +57,13 @@
 			<div class="view-box">
 				<div class="box-object">
 					<div class="box-title">
-						5.five
+						{{ user.title || contents[4].mandal_col5 }}
 					</div>
 					<div class="box-date">
-						date
+						{{ user.desc }}
 					</div>
 					<div class="box-content">
-						contentzxcontentzxcontentzxcontentzxcontentzxcontentzxcontentzxcontentzxcontentzx
-						overflow-x test
-					</div>
-				</div>
-				<div class="box-object">
-					<div class="box-title">
-						title
-					</div>
-					<div class="box-date">
-						date
-					</div>
-					<div class="box-content">
-						content
+						화이팅 아자!! 8월까지 꼭 하자ㅜㅜ
 					</div>
 				</div>
 			</div>
@@ -85,22 +73,22 @@
 			<div class="color-picker">
 			</div> 
 			<div class="mandal-table">
-				<h1 class="title" href="#" editable-text="user.title">{{ user.title || '만다라트 이름' }}</h1>
-				<h2 class="description" href="#" editable-textarea="user.desc" e-rows="7" e-cols="20">
+				<h1 class="title" href="#" editable-text="user.title" ng-model="user.title">{{ user.title || '만다라트 이름' }}</h1>
+				<h2 class="description" href="#" editable-textarea="user.desc" e-rows="2" e-cols="50" ng-model="user.desc">
 					<pre>{{ user.desc || '해당 만다라트의 세부내용을 입력해주세요.' }}</pre></h2>
 
 				<table class="table table-bordered">
 					<tbody>
-						<tr ng-repeat="row in mandal">
-						<td><a href="#" editable-text="row.one" data-e-style="width:90px; height:28px;">{{ row.one || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.two" data-e-style="width:90px; height:28px;">{{ row.two || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.three" data-e-style="width:90px; height:28px;">{{ row.three || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.four" data-e-style="width:90px; height:28px;">{{ row.four || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.five" data-e-style="width:90px; height:28px;">{{ row.five || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.six" data-e-style="width:90px; height:28px;">{{ row.six || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.seven" data-e-style="width:90px; height:28px;">{{ row.seven || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.eight" data-e-style="width:90px; height:28px;">{{ row.eight || '쓰기' }}</a></td>
-						<td><a href="#" editable-text="row.nine" data-e-style="width:90px; height:28px;">{{ row.nine || '쓰기' }}</a></td>
+						<tr ng-repeat="row in contents">
+						<td><a href="#" editable-text="row.mandal_col1" data-e-style="width:90px; height:28px;">{{ row.mandal_col1 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col2" data-e-style="width:90px; height:28px;">{{ row.mandal_col2 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col3" data-e-style="width:90px; height:28px;">{{ row.mandal_col3 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col4" data-e-style="width:90px; height:28px;">{{ row.mandal_col4 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col5" data-e-style="width:90px; height:28px;">{{ row.mandal_col5 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col6" data-e-style="width:90px; height:28px;">{{ row.mandal_col6 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col7" data-e-style="width:90px; height:28px;">{{ row.mandal_col7 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col8" data-e-style="width:90px; height:28px;">{{ row.mandal_col8 || '쓰기' }}</a></td>
+						<td><a href="#" editable-text="row.mandal_col9" data-e-style="width:90px; height:28px;">{{ row.mandal_col9 || '쓰기' }}</a></td>
 						</tr>
 					</tbody>
 				</table>

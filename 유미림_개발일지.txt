@@ -51,8 +51,12 @@ V 행마다 편집, 완료
 V 테이블 안에 클릭해서 바꾸는 a태그 사용
 V 9*9의 내용을 채울 수 있게
 V hyper underline 안생기게
+오후 3:15 2016-07-29
+V 상단바의 상세내용, 만달이름과 제목 연동 ( 만달 이름 없을 경우 최종 목표 띄움 )
+ㄴ특정칸의 값 불러오기 가능
+V 상단바 상세설명 단어 단위로 끊음
 
-2. 특정 칸의 css나 값 불러오기 (상단바 띄울 때 사용)
+
 3. 링크 걸기
 https://codepen.io/Lewitje/pen/zqVaPY?editors=0110		파레트링크
 4. 테이블과 캔버스 화살표가 같이 되는지 보기 (파레트 띄울 때 색깔 같이 바뀌게)
@@ -60,7 +64,6 @@ https://codepen.io/Lewitje/pen/zqVaPY?editors=0110		파레트링크
 5. 상단바 overflow-x 확인
 6. 탭 사용 가능하게
 
-http://plnkr.co/edit/bR1p1FnnAtnlKNYQdPPt?p=preview      필터예제
 http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp    부트스트랩 아이콘
 http://dolly77.tistory.com/5	띄어쓰기
 << 돋보기창 >>

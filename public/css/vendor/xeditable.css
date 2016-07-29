@@ -76,6 +76,7 @@
 .editable-checkbox label span,
 .editable-checklist label span,
 .editable-radiolist label span {
+  text-align: center;
   margin-left: 7px;
   margin-right: 10px;
 }

@@ -27,9 +27,12 @@
   height: 78vh;
   padding-top: 20px;
   padding-left: 30px;
+  word-break: keep-all;
   overflow-y: scroll;
-  overflow-x: hidden;
-  border: 1px solid red;
+}
+
+.box-title {
+  font-size: 2em;
 }
 
 .mandal-mandal {
