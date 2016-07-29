@@ -38,86 +38,86 @@
 	</head>
 
 	<body>
-	<div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="header-inner">
-				<h1><a href="/">한다라트</a></h1>
-				<nav role="navigation">
-					<ul>
-						<li><a href="/bucket">버킷리스트</a></li>
-						<li><a href="/mandal">만다라트</a></li>
-						<li><a href="/calendar">달력</a></li>
-						<li class="cta"><a href="/profile">마이페이지</a></li>
-					</ul>
-				</nav>
+		<div id="fh5co-page">
+		<header id="fh5co-header" role="banner">
+			<div class="container">
+				<div class="header-inner">
+					<h1><a href="/">한다라트</a></h1>
+					<nav role="navigation">
+						<ul>
+							<li><a href="/bucket">버킷리스트</a></li>
+							<li><a href="/mandal">만다라트</a></li>
+							<li><a href="/calendar">달력</a></li>
+							<li class="cta"><a href="/profile">마이페이지</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<div id='calendar'>
-		<div class="modal fade layerpop" id="addModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">일정 설정</h4>
+		<div id='calendar'>
+			<div class="modal fade layerpop" id="addModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">일정 설정</h4>
+						</div>
+						<div class="modal-body">
+							<p>
+								<label>일정</label><br/>
+								<input type = "text" id = "addTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80">
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type = "button" class="btn btn-primary" id="add">추가</button>
+						</div>
 					</div>
-					<div class="modal-body">
-						<p>
-							<label>일정</label><br/>
-							<input type = "text" id = "addTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80">
-						</p>
+				</div>
+			</div>
+
+			<div class="modal fade layerpop" id="editModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">일정 설정</h4>
+						</div>
+						<div class="modal-body">
+							<p>
+								<label>일정</label><br/>
+								<input type = "text" id = "editTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80">
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type = "button" class = "btn btn-danger" id = "remove">삭제</button>
+							<button type = "button" class = "btn btn-primary" id = "detail">자세히</button>
+							<button type = "button" class = "btn btn-primary" id = "edit">수정</button>
+						</div>
 					</div>
-					<div class="modal-footer">
-						<button type = "button" class="btn btn-primary" id="add">추가</button>
+				</div>
+			</div>
+
+			<div class="modal fade layerpop" id="detailModal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">일정</h4>
+						</div>
+						<div class="modal-body">
+							<p>
+								<label>일정</label><br/>
+								<input type = "text" id = "detailTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80"><br/>
+								<label>색상</label><br/>
+								<label>반복</label><br/>
+								<label>알람</label><br/>
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type = "button" class = "btn btn-primary" id = "editDetail">저장</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="modal fade layerpop" id="editModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">일정 설정</h4>
-					</div>
-					<div class="modal-body">
-						<p>
-							<label>일정</label><br/>
-							<input type = "text" id = "editTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80">
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type = "button" class = "btn btn-danger" id = "remove">삭제</button>
-						<button type = "button" class = "btn btn-primary" id = "detail">자세히</button>
-						<button type = "button" class = "btn btn-primary" id = "edit">수정</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="modal fade layerpop" id="detailModal">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title">일정</h4>
-					</div>
-					<div class="modal-body">
-						<p>
-							<label>일정</label><br/>
-							<input type = "text" id = "detailTitle" class = "span10" placeholder="내용을 입력하세요" maxlength="80"><br/>
-							<label>색상</label><br/>
-							<label>반복</label><br/>
-							<label>알람</label><br/>
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type = "button" class = "btn btn-primary" id = "editDetail">저장</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>
 	</body>
 </html>

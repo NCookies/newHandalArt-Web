@@ -51,87 +51,174 @@
 			</div>
 		</header>
 		
-		<div id = "fh5co-work-section">
-		<!-- <div class = "container"> -->
-			<div class = "content-part">
-				<div id = "list-view-page">
-					<!-- 메뉴 -->
-					<ul id = "list-view-tab" class = "nav nav-tabs">
-					<!-- 진행 -->
-						<li class = "active" style = "text-align: center">
-							<a href = "#todo" data-toggle = "tab">
-								<span class = "number"></span><br>
-								<span class = "text">진행중인 목표</span>
-							</a>
-						<!-- 완료 -->
-						<li class style = "text-alige:center">
-							<a href = "#done" data-toggle = "tab">
-								<span class = "number"></span><br>
-								<span class = "text">완료한 목표</span>
-							</a>
-						</li>
-					</ul>
-					<!-- 목표 -->
-					<div id = "my-list">
-						<div id = "category_value" style = "display:none;">None
-						</div>
-						<div id = "list-view-content" class = "tab-content">
-							<!-- 진행 -->
-							<div class = "tab-pane fade endless_page_template active in" id = "todo">
-								<div class = "tab-header">
-									<div class = "tab-header-left">
+		<div class = "content-part">
+			<div id = "list-view-page">
+				<!-- 메뉴 -->
+				<ul id = "list-view-tab" class = "nav nav-tabs">
+				<!-- 진행 -->
+					<li class = "active" style = "text-align: center">
+						<a href = "#todo" data-toggle = "tab">
+							<span class = "number"></span><br>
+							<span class = "text">진행중인 목표</span>
+						</a>
+					</li>
+					<!-- 완료 -->
+					<li class style = "text-alige:center">
+						<a href = "#done" data-toggle = "tab">
+							<span class = "number"></span><br>
+							<span class = "text">완료한 목표</span>
+						</a>
+					</li>
+				</ul>
+				<!-- 목표 -->
+				<div id = "my-list">
+					<div id = "category_value" style = "display:none;">None
+					</div>
+					<div id = "list-view-content" class = "tab-content">
+						<!-- 진행 -->
+						<div class = "tab-pane fade endless_page_template active in" id = "todo">
+							<div class = "tab-header">
+								<div class = "tab-header-left">
+								</div>
+								<div class = "tab-header-right">
+									<div class = "btn-group">
+										<button id = "add-goal" class = "btn bucketblue">추가</button>
 									</div>
-									<div class = "tab-header-right">
-										<div class = "btn-group">
-											<button id = "add-goal" class = "btn bucketblue">추가</button>
+								</div>
+								<div class = "clear">
+								</div>
+							</div>
+							<br>
+							<div class = "content">
+							<ul id = "list-view-todo" class = "item-list-view">
+								<li class="item-obj">
+  									<div class="item-tags-hidden" style="display:none;">
+  									</div>
+  								
+  									<div class="photo">
+						        		<img src="/static/images/item_no_photo.png" alt="Asdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdf - Bucket List Ideas">
+									        <div class="clear">
+									        </div>
+      								</div>
+  									<div class="item-info">
+   										<div class="item-title">
+      										<h3>
+        										<a class="item" href="/idea/ywEp/asdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdf/"><span class="item-idx">1</span>. Asdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdfasdfsdfsdfasdfasdfasdf</a>
+										    </h3>
+    									</div>
+  									</div>
+		  							<div class="action-buttons" tabindex="1000">
+									    <button id = "edit-goal" data-backdrop="true" data-toggle="modal" data-remote="/5806935/edit/" class="bucketgreen btn small action-edit" title="Edit" name = "edit"><i class="icon-edit"></i>수정</button>
+									    <button id = "complete" data-backdrop="true" data-toggle="modal" data-remote="/5806935/edit/complete_goal/" class="bucketblue btn small" title="Mark item complete" name = "complete"><i class="icon-ok"></i>목표 완료확인</button>
+									</div>
+    								<button href="/5806935/delete/" data-ask="yes" class="btn bucketred small action-delete" title="Remove" name = "delete"><i class="icon-trash"></i></button>
+									<div class="clear"></div>
+								</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 완료 -->
+						<div class = "tab-pane hide endless_page_template active in" id = "done">		<!-- 완료페이지에서 추가버튼 숨김 -->
+							<div class = "tab-header">
+								<div class = "tab-header-left">
+								</div>
+								<div class = "tab-header-right">
+									<div class = "btn-group">
+										<button href = "#" class = "btn bucketblue">추가
+										</button>
+									</div>
+								</div>
+							</div>
+							<br>
+							<ul id = "list-view-done" class = "item-list-view">
+								<li class = "item-obj completed-goal" id = "completed">
+									<div class = "item-tags-hidden" style = "display:none;">
+									</div>
+									<div class = "photo">
+										<div class = "goal-photo">
+											<div class = "photo-overlay">
+												<div class = "item-title">
+													<h3>
+													</h3>
+												</div>
+												<div class = "action-buttons" tabindex = "1000">
+												</div>
+											</div>
 										</div>
 									</div>
+									<div class = "item-info">
+										<div class = "due-date" title = "Completed date">
+											<h5>
+											</h5>
+										</div>
+										<div class = "read-more-container">
+											<button class = "read-more btn bucketgreen small">더 보기</button>
+										</div>
+									</div>
+									<a data-backdrop = "true" data-toggle = "modal" data-target = "#itemModal" class = "bucketblue btn small action-edit action-edit-new" title = "Edit">
+										<i class = "icon-edit">
+										</i>
+									</a>
+									<a data-ask = "yes" class = "btn bucketred small action-delete" title = "Remove">
+										<i class = "icon-trash">
+										</i>
+									</a>
 									<div class = "clear">
 									</div>
-								</div>
-								<br>
-							</div>
-							<!-- 완료 -->
-							<div class = "tab-pane hide endless_page_template" id = "done">		<!-- 완료페이지에서 추가버튼 숨김 -->
-								<div class = "tab-header">
-									<div class = "tab-header-left">
-									</div>
-									<div class = "tab-header-right">
-										<div class = "btn-group">
-											<a href = "#" class = "btn bucketblue">추가</a>
-										</div>
-									</div>
-								</div>
-								<br>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 본문에 필요한 소스는 이 안에 입력하면 됨 -->
-				<div class = "modal fade layerpop" id = "addModal">
-					<div class = "modal-dialog">
-						<div class = "modal-header">
-							<h4 class = "modal-title">목표 설정</h4>
-						</div>
-						<div class = "modal-body">
-							<p>
-								<label>목표</label><br/>
-								<input type = "text" id = "addGoal" class = "span10" placeholder = "내용을 입력하세요" maxlength = "80"><br/>
-								<label>카테고리</label><br/>
-								<label>완료날짜</label><br/>
-								<!-- <input type =  달력띄워서 날짜선택-->
-								<label>사진</label><br/>
-								<!-- 사진선택 (드래그, 파일고르기) -->
-								<label>세부내용</label><br/>
-							</p>
-						</div>
-						<div class = "modal-footer">
-							<button type = "button" class = "btn btn-primary" id = "add">추가</button>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+
+			<!-- 본문에 필요한 소스는 이 안에 입력하면 됨 -->
+			<div class = "modal fade layerpop" id = "addModal">			<!-- 목표 추가 -->
+				<div class = "modal-dialog">
+					<div class = "modal-header">
+						<h4 class = "modal-title">목표 설정</h4>
+					</div>
+					<div class = "modal-body">
+						<p>
+							<label>목표</label><br/>
+							<input type = "text" id = "addGoal" class = "span10" placeholder = "내용을 입력하세요" maxlength = "80"><br/>
+							<label>카테고리</label><br/>
+							<label>완료날짜</label><br/>
+							<!-- <input type =  달력띄워서 날짜선택-->
+							<label>사진</label><br/>
+							<!-- 사진선택 (드래그, 파일고르기) -->
+							<label>세부내용</label><br/>
+						</p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-primary" id = "add">추가</button>
+					</div>
+				</div>
+			</div>
+
+			<div class = "modal fade layerpop" id = "editModal">			<!-- 목표 수정 -->
+				<div class = "modal-dialog">
+					<div class = "modal-header">
+						<h4 class = "modla-title">목표 설정</h4>
+					</div>
+					<div class = "modal-body">
+						<p>
+							<label>목표</label><br/>
+							<input type = "text" id = "editGoal" class = "span10" placeholder = "내용을 입력하세요" maxlength = "80"><br/>
+							<label>카테고리</label><br/>
+							<label>완료날짜</label><br/>
+							<!-- <input type =  달력띄워서 날짜선택-->
+							<label>사진</label><br/>
+							<!-- 사진선택 (드래그, 파일고르기) -->
+							<label>세부내용</label><br/>
+						</p>
+					</div>
+					<div class = "modal-footer">
+						<button type = "button" class = "btn btn-primary" id = "edit">수정</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	</body>						
 </html>

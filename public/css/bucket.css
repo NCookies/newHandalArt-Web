@@ -9,7 +9,7 @@
     width: auto;
     float: right;
     position: relative;
-    top: -55px;			/* 버튼위치 지정해줌 */
+    top: -95px;			/* 버튼위치 지정해줌 */
 }
 
 .btn.bucketblue {
@@ -24,5 +24,244 @@
     margin-bottom: 10px;
     background-color: #fff;
     position: relative;
+}
+
+.item-list-view {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+li {
+    display: list-item;
+    /*text-align: -webkit-match-parent;*/
+}
+
+button {
+    background: #3de4d3;
+    color: #fff;
+    border-color:#3de4d3;
+}
+
+/*#trash {
+    background: #d43f3a !important; 
+    color: #fff;
+    border-color: #d43f3a;
+}*/
+#list-view-content {
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacitye .15s linear;
+}
+
+@media screen and (max-width: 670px)
+.tab-content .tab-header {
+    float: none;
+    top: 0;
+    padding: 10px !important;
+    background: #fff;
+    margin-top: -33px;
+    border-left: 4px sloid #12alda;
+    height: 44px;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    /* 클릭한 메뉴밑에 선 표시 */
+    /*-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;*/
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.tab-content .item-list-view li.item-obj {
+    text-align: left!important;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.item-list-view li.item-obj .photo {
+    /* width: 140px; */
+    max-width: 140px;
+    width: 25%;
+    max-height: 140px;
+    overflow: hidden;
+    float: left;
+}
+
+a {
+    color: #3de4d3;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+}
+
+a {
+    color: #3de4d3;
+    text-decoration: none;
+}
+
+a {
+    background: transparent;
+}
+
+a {
+    background: 0 0;
+}
+
+li.item-obj .photo a img {
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+img {
+    border: 0;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+}
+
+.clear {
+    clear: both;
+}
+
+@media (max-width: 350px)
+.dashboard .item-list-view li.item-obj .photo, .dashboard .item-obj .item-info {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    max-height: inherit;
+}
+
+.item-info {
+    float: left;
+    width: auto;
+    max-width: 58%;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.item-info .item-title h3 {
+    font-style: normal;
+    margin: 0;
+    font-weight: 300;
+}
+
+h3 {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 300;
+}
+
+h3, .h3 {
+    font-size: 24px;
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+@media (max-width: 550px)
+#list-view-todo .item-obj .action-buttons {
+    position: relative;
+    clear: both;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.action-buttons {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+@media (max-width: 350px)
+.dashboard .action-buttons a {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
+}
+.tab-content .item-list-view li.item-obj {
+    text-align: left!important;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+li.item-obj {
+    height: 140px;
+}
+
+h3 {
+    word-break: break-all;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    color: #fff;
 }
 
