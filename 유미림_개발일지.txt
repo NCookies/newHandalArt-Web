@@ -41,32 +41,7 @@ V div class = 보이는 문제 해결
 V 커서 I
 http://stackoverflow.com/questions/29519868/bootstrap-progress-bar-with-gradient-color-showing-proportionally-on-active-widt
 V td 클릭할 때마다 설정 폼이 보이게 수정
-
-0728_목
-V Angular.js table 이용
-V 기본 틀 완성
-V 행마다 편집, 완료
-
-오전 10:44 2016-07-29
-V 테이블 안에 클릭해서 바꾸는 a태그 사용
-V 9*9의 내용을 채울 수 있게
-V hyper underline 안생기게
-오후 3:15 2016-07-29
-V 상단바의 상세내용, 만달이름과 제목 연동 ( 만달 이름 없을 경우 최종 목표 띄움 )
-ㄴ특정칸의 값 불러오기 가능
-V 상단바 상세설명 단어 단위로 끊음
-
-
-3. 링크 걸기
-https://codepen.io/Lewitje/pen/zqVaPY?editors=0110		파레트링크
-4. 테이블과 캔버스 화살표가 같이 되는지 보기 (파레트 띄울 때 색깔 같이 바뀌게)
-안되면 이미지
-5. 상단바 overflow-x 확인
-6. 탭 사용 가능하게
-
-http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp    부트스트랩 아이콘
-http://dolly77.tistory.com/5	띄어쓰기
-<< 돋보기창 >>
+<< 돋보기창 >>--------<< 돋보기창 안씀 >>
 - 네모 누르면 편집 가능
 - 네모 누르면 위에 목표날짜, 퍼센트 입력하는 폼만 
 - ajax로 보냄
@@ -78,6 +53,45 @@ _2차 목표 모두 완료 시, 1차 목표에 도장
 - 날짜 선택하고 돋보기 창 사라지는 문제
 - 날짜 css 겹치는 문제
 
+
+0728_목
+V Angular.js table 이용
+V 기본 틀 완성
+V 행마다 편집, 완료
+
+오전 10:44 2016-07-29
+V 테이블 안에 클릭해서 바꾸는 a태그 사용
+V 9*9의 내용을 채울 수 있게
+V hyper underline 안생기게
+오후 3:15 2016-07-29
+V 상단바의 상세내용, 만달이름과 제목 연동 ( 만달 이름 없을 경우 최종 목표 )
+ㄴ특정칸의 값 불러오기 가능
+V 상단바 상세설명 단어 단위로 끊음
+
+오전 12:26 2016-08-07
+V 포트번호 사용중이래서 3002로 변경
+
+오후 9:09 2016-08-07 시작!
+https://codepen.io/Lewitje/pen/zqVaPY?editors=0110		파레트링크
+오후 10:18 2016-08-07	V 파레트 갈수록 진하게 코드수정해서 적용
+오후 10:43 2016-08-07	V mandal-mandal-detail-edit div만듬  V td색 바뀌게 함
+
+GOAL____
+앵귤라 책읽기 자바스크립트 html css도 완벼ㅕㄱ하게
+
+TODO____
+상단바 완벽하게 ( 아래에 상세설명 )
+추가버튼 클릭 시 새로운 앵귤라 테이블 생성
+2차목표 공통으로 들어가야 함 연결.
+css로 표 구분.
+클릭할때마다 디테일 에디트 보이게 show(), hide() ㄱㄱ?
+파레트가 각각 td마다 있어야 함.
+디테일 에디트 클릭 시에는 xeditable text의 확인 버튼이 없어지면 안됨. 예외처리 ㄱㄱ
+링크 걸기(?) 할 필요가 있을까?
+테이블과 캔버스 화살표가 같이 되는지 보기 (파레트 띄울 때 색깔 같이 바뀌게) // 안되면 이미지
+
+http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp    부트스트랩 아이콘
+
 << 상단바 >>
 _마우스 오버 시 상단바의 버튼 제작
 mandal-over-container	mandal-over-edit	mandal-over-more	mandal-over-remove
@@ -85,7 +99,7 @@ mandal-over-share (메일, 페북)
 _새 만다라트 버튼 클릭 시, 작업 창에 만다라트 생김
 _최종목표가 mandal-left-title로
 _mandal-over-edit 시
-1. 상세 내용 작성
+V 상세 내용 작성
 해당 만다라트에 대한 설명을 작성해주세요.
 내용 길어질 때, 보여주는 것
 2. 사진 첨부
@@ -95,15 +109,6 @@ _mandal-over-edit 시
 _각 만다라트마다 마지막 수정날짜 표시
 _사이즈 줄이면 상단바 줄임
 _1차 목표 완료 시, 상단바에 줄 그음
-
-<< 색상파레트 추가 >>
-_ 사용자가 색깔 선택 시, 만다라트의 색 바뀜
-
-<< 만다라트 디자인 >>
-- 돋보기창 위치 가운데로
-- 클릭하기 전에는 목표 이름만
-- ul, li 조정해서 크기 수정
-- 퍼센트 +,- 위치수정
 
 << 메인 디자인 수정 >>
 ㄴ_오류 수정
