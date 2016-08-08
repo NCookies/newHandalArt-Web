@@ -1,12 +1,8 @@
 $( function() {
-  $("#datepicker").datepicker({minDate: 0});(
-
-	$(".xeditable_text").one("click", function() {
-		$('#datepicker').show();
-		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
-		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
-		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
-	});
+  $("#datepicker").datepicker({minDate: 0});
+	$(".mandal-mandal-detail-edit").on("click", function() {
+		console.log();
+	})
 });  
 
 var colorPicker = (function(){
@@ -87,11 +83,22 @@ var colorPicker = (function(){
 	}
 	
 	function createColorPicker(callback){
+	/*	$('.mandal-mandal-detail-edit').append('<p>Date: <input type="text" id="datepicker"></p>');
 		$('.color-picker').append('<div class="base-colors"></div>');
-		/*$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
+		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
 	*/
+	$('.color-picker').append('<div class="base-colors"></div>');
+  
+	$(".xeditable_text ng").one("click", function() {
+		alert("ejejejeje");
+	  $('.mandal-mandal-detail-edit').append('<p>목표날짜: <input type="text" id="datepicker"></p>');
+		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
+		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
+		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
+  });
+		
 		callback();
 	}
 	
@@ -164,8 +171,8 @@ var colorPicker = (function(){
 var app = angular.module("app", ["xeditable"]);
 
 app.run(function(editableOptions) {
-  editableOptions.theme = 'bs3';
-	colorPicker.init();	
+  editableOptions.theme = 'bs3';		
+  colorPicker.init();	
 });
 
 app.controller('Ctrl', function($scope, $filter) {
@@ -186,7 +193,6 @@ app.controller('Ctrl', function($scope, $filter) {
     mandal_col9: 9
   }, {  
     mandal_col1: '1234',
-    mandal_col2: 't2345wo',
     mandal_col3: 'th456ree',
     mandal_col4: '45',
     mandal_col5: '4',
@@ -208,6 +214,7 @@ app.controller('Ctrl', function($scope, $filter) {
     mandal_col1: 'oen',
     mandal_col2: 'two',
     mandal_col3: 'three',
+    mandal_col4: 'test',
     mandal_col8: 8,
     mandal_col9: 9
   }, {  
