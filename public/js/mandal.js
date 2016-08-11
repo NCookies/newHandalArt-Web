@@ -1,8 +1,33 @@
 $( function() {
+	$.datepicker.regional['ko'] = {
+		closeText: '닫기',
+		prevText: '이전',
+		nextText: '다음',
+		currentText: '오늘',
+		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+		dayNames: ['일','월','화','수','목','금','토'],
+		dayNamesShort: ['일','월','화','수','목','금','토'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		weekHeader: 'Wk',
+		dateFormat: 'yy-mm-dd',
+		firstDay: 0,
+		isRTL: false,
+		showMonthAfterYear: true,
+		yearSuffix: ''};
+	$.datepicker.setDefaults($.datepicker.regional['ko']);
+
   $("#datepicker").datepicker({minDate: 0});
-	$(".mandal-mandal-detail-edit").on("click", function() {
-		console.log();
-	})
+
+	$("td").on("click", function() {
+		var data = angular
+        .element(document.querySelector('[ng-controller="Ctrl"]'))
+        .scope()
+				.contents[4]
+				.mandal_col5;
+
+		console.log(data);
+	});
 });  
 
 var colorPicker = (function(){
@@ -83,22 +108,21 @@ var colorPicker = (function(){
 	}
 	
 	function createColorPicker(callback){
-	/*	$('.mandal-mandal-detail-edit').append('<p>Date: <input type="text" id="datepicker"></p>');
+/*  $('.mandal-mandal-detail-edit').append('<p>Date: <input type="text" id="datepicker"></p>');
 		$('.color-picker').append('<div class="base-colors"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
-	*/
+*/
 	$('.color-picker').append('<div class="base-colors"></div>');
-  
-	$(".xeditable_text ng").one("click", function() {
-		alert("ejejejeje");
+
+	//$(".mandal-table").on("click", function() {
 	  $('.mandal-mandal-detail-edit').append('<p>목표날짜: <input type="text" id="datepicker"></p>');
 		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
-  });
-		
+  //});
+
 		callback();
 	}
 	
@@ -193,7 +217,6 @@ app.controller('Ctrl', function($scope, $filter) {
     mandal_col9: 9
   }, {  
     mandal_col1: '1234',
-    mandal_col3: 'th456ree',
     mandal_col4: '45',
     mandal_col5: '4',
     mandal_col6: '4',
@@ -222,7 +245,7 @@ app.controller('Ctrl', function($scope, $filter) {
     mandal_col2: 'two',
     mandal_col3: 'three',
     mandal_col4: 'four',
-    mandal_col5: 'five'
+    mandal_col5: 'colum5'
   }, {  
     mandal_col5: 'five',
     mandal_col6: 'six',
@@ -258,4 +281,6 @@ app.controller('Ctrl', function($scope, $filter) {
     mandal_col8: 8,
     mandal_col9: 'sdfs'
   }];
+
+	$scope.contents[1].mandal_col2 = $scope.contents[4].mandal_col5;
 });	

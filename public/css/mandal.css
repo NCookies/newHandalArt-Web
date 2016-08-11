@@ -45,7 +45,7 @@
 
 .mandal-table {
   height: 78vh;
-  margin: 0 20px 0 20px;
+  margin: 25px 20px 0 20px;
   border: 1px solid red;
 }
 
@@ -124,4 +124,35 @@ div[ng-app] { margin: 50px; }
 }
 .color-var.active {
           transform: scale(1.3, 1.3);
+}
+
+.ui-datepicker {
+  background: #fff;
+  font-size:11px;
+  padding:10px;
+  border:1px solid #ccc;
+}
+.ui-datepicker table {
+  width:278px;
+}
+.ui-datepicker table td {
+text-align:center;
+}
+.ui-state-default {
+text-decoration:none;
+}
+.ui-datepicker tr {
+border-bottom: none;
+}
+.ui-datepicker a {
+cursor:pointer;
+color: black;
+text-decoration:none;
+}
+.ui-datepicker-next {
+float:right;
+}
+.ui-datepicker-title {
+text-align: center;
+font-weight:bold;
 }
