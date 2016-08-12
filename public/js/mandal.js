@@ -19,16 +19,13 @@ $( function() {
 
   $("#datepicker").datepicker({minDate: 0});
 
-	$("td").on("click", function() {
-		var data = angular
-        .element(document.querySelector('[ng-controller="Ctrl"]'))
-        .scope()
-				.contents[4]
-				.mandal_col5;
 
-		console.log(data);
-	});
+  $(".mandal-mandal-detail-edit").click(function(e){
+    e.stopPropagation();
+  });
 });  
+
+var needColorPicker = true;
 
 var colorPicker = (function(){
 	
@@ -108,20 +105,17 @@ var colorPicker = (function(){
 	}
 	
 	function createColorPicker(callback){
-/*  $('.mandal-mandal-detail-edit').append('<p>Date: <input type="text" id="datepicker"></p>');
 		$('.color-picker').append('<div class="base-colors"></div>');
-		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
-		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
-		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
-*/
-	$('.color-picker').append('<div class="base-colors"></div>');
 
-	//$(".mandal-table").on("click", function() {
-	  $('.mandal-mandal-detail-edit').append('<p>목표날짜: <input type="text" id="datepicker"></p>');
+		// xeditable이 작동하면 생기고 포커스가 없어지면 같이 없어짐.
+		$(".xeditable_text").on("show", function() {
+			alert(this);
+		});
+
+		$('.mandal-mandal-detail-edit').append('<p>목표날짜: <input type="text" id="datepicker"></p>');
 		$('.mandal-mandal-detail-edit').append('<div class="varied-colors"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="active-color"></div>');
 		$('.mandal-mandal-detail-edit').append('<div class="color-history"></div>');
-  //});
 
 		callback();
 	}

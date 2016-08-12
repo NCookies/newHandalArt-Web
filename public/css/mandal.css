@@ -48,10 +48,6 @@
   margin: 25px 20px 0 20px;
   border: 1px solid red;
 }
-
-.mandal-mandal-detail-edit {
-  background-color: black;
-}
 td {
   text-align: center;
 }
@@ -80,6 +76,10 @@ tr:last-child {
 
 div[ng-app] { margin: 50px; }
 
+.mandal-mandal-detail-edit p {
+  text-align: center;
+  margin-bottom: 0;
+}
 .color-picker {
   height: 30px;
   width: 100%;

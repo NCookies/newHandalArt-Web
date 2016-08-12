@@ -105,8 +105,18 @@ $scope.contents[1].mandal_col2	컨트롤러 안에서의 변수사용
 오전 1:17 2016-08-12 $watch를 사용해야 하는 건가? 모르겠다............
 처음에는 같은 값을 보여주지만 수정한 후에는 남남이 됨...
 
-오전 1:43 2016-08-12 datepicker css, design 수정
+오전 1:43 2016-08-12 datepicker css, design 수정, 한글화
+오전 1:57 2016-08-12 으웩
 
+오후 2:19 2016-08-12 시작!
+오후 2:48 2016-08-12 
+p태그 가운데 정렬
+?? 왜 alert에서 this할 때는 object로 나오고 console.log할 때는 더 자세히 나올까
+내일 디테일 에디트 클릭 시에는 xeditable text의 확인 버튼이 없어지면 안됨. 예외처리함.
+http://devbox.tistory.com/entry/jQuery-%EC%97%98%EB%A6%AC%EB%A8%BC%ED%8A%B8-%EC%A0%9C%EC%96%B4
+
+
+GOAL____
 앵귤라 책읽기 자바스크립트 html css도 완벼ㅕㄱ하게
 
 TODO____
@@ -115,9 +125,9 @@ TODO____
 2차목표 공통으로 들어가야 함 연결.
 클릭할때마다 디테일 에디트 보이게 show(), hide() ㄱㄱ?
 파레트가 각각 td마다 있어야 함.
-디테일 에디트 클릭 시에는 xeditable text의 확인 버튼이 없어지면 안됨. 예외처리 ㄱㄱ
 링크 걸기(?) 할 필요가 있을까?
 테이블과 캔버스 화살표가 같이 되는지 보기 (파레트 띄울 때 색깔 같이 바뀌게) // 안되면 이미지
+달력 글씨 크기 더 크게
 
 http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp    부트스트랩 아이콘
 
