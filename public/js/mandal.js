@@ -20,9 +20,9 @@ $( function() {
   $("#datepicker").datepicker({minDate: 0});
 
 
-  $(".mandal-mandal-detail-edit").click(function(e){
+/*  $(".mandal-mandal-detail-edit").click(function(e){
     e.stopPropagation();
-  });
+  });*/
 });  
 
 var needColorPicker = true;

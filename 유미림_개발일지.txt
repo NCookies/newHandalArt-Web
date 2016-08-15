@@ -115,6 +115,9 @@ p태그 가운데 정렬
 내일 디테일 에디트 클릭 시에는 xeditable text의 확인 버튼이 없어지면 안됨. 예외처리함.
 http://devbox.tistory.com/entry/jQuery-%EC%97%98%EB%A6%AC%EB%A8%BC%ED%8A%B8-%EC%A0%9C%EC%96%B4
 
+오후 1:08 2016-08-14 ㅅㅈ!
+
+
 
 GOAL____
 앵귤라 책읽기 자바스크립트 html css도 완벼ㅕㄱ하게
