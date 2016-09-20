@@ -1,3 +1,12 @@
+http://codepen.io/jjmartucci/pen/KFjbH 	//d3 시계
+http://codepen.io/kevin940726/pen/jPoWOB // 가운데 퍼센트
+http://codepen.io/bentravis/pen/GgRpQX //위의 링크보다 이게 나을듯, 일정이름,% 설명
+
+https://github.com/mbostock/d3/wiki/CSV  //d3.circlePie --> CSV이용
+https://d3js.org/  //이벤트
+옛날 책
+
+
 http://wit.nts-corp.com/2014/01/16/686
 네이버는 이렇게 한다! 프런트엔드 개발 시작하기
 http://yoon-talk.tistory.com/352 ++ 이미지
@@ -115,7 +124,8 @@ p태그 가운데 정렬
 내일 디테일 에디트 클릭 시에는 xeditable text의 확인 버튼이 없어지면 안됨. 예외처리함.
 http://devbox.tistory.com/entry/jQuery-%EC%97%98%EB%A6%AC%EB%A8%BC%ED%8A%B8-%EC%A0%9C%EC%96%B4
 
-오후 1:08 2016-08-14 ㅅㅈ!
+오전 8:50 2016-08-16 ㅅㅈ!
+eidt div xeditable 수정할때마다 나오기
 
 
 

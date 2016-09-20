@@ -17,12 +17,16 @@ $( function() {
 		yearSuffix: ''};
 	$.datepicker.setDefaults($.datepicker.regional['ko']);
 
-  $("#datepicker").datepicker({minDate: 0});
-
+  $('.xeditable_text').on('shown', function() {
+	  alert("hell");
+  });
 
 /*  $(".mandal-mandal-detail-edit").click(function(e){
     e.stopPropagation();
   });*/
+  $(".xeditable_text").on("shown", function() {
+	  alert("hello");
+  })
 });  
 
 var needColorPicker = true;
