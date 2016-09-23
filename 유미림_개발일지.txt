@@ -50,6 +50,7 @@ V div class = 보이는 문제 해결
 V 커서 I
 http://stackoverflow.com/questions/29519868/bootstrap-progress-bar-with-gradient-color-showing-proportionally-on-active-widt
 V td 클릭할 때마다 설정 폼이 보이게 수정
+
 << 돋보기창 >>--------<< 돋보기창 안씀 >>
 - 네모 누르면 편집 가능
 - 네모 누르면 위에 목표날짜, 퍼센트 입력하는 폼만 
@@ -89,15 +90,6 @@ https://codepen.io/Lewitje/pen/zqVaPY?editors=0110		파레트링크
 
 오전 12:53 2016-08-09 시작!
 오전 1:18 2016-08-09	V basecolor는 항상 보이게
-오후 12:35 2016-08-09
-xeditable -> derail-edit div 클릭시에는 전송하지 않게, 마우스 안 먹히게
-xeditable 클릭이 안됨. 클릭할때마다 append되는 문제 해결 필요.
-색깔을 선택했을 때 채도는 어떻게 맞춤?
-각 칸마다 퍼센트를 입력하지 않았다면?? --> 도장의 필요성
-
-처음에는 기존의 만다라트와 같이 색깔 배정, 대신 매우 옅은 색으로
-2,3차 목푱
-선택한 rgb와 날짜값은 각 td에 저장
 
 오후 11:13 2016-08-11 시작!
 오후 11:18 2016-08-11 fb
@@ -126,6 +118,13 @@ http://devbox.tistory.com/entry/jQuery-%EC%97%98%EB%A6%AC%EB%A8%BC%ED%8A%B8-%EC%
 
 오전 8:50 2016-08-16 ㅅㅈ!
 eidt div xeditable 수정할때마다 나오기
+
+오후 8:16 2016-09-22 ㅅㅈ!
+색깔 신경쓰지말고 일단 기본적인 기능이라도 완벽하게 구현하자. 주석 좀 써놓을걸..
+라이브러리도 줄이기
+2차목표 연동이 안되는 문제 해결하기
+오후 10:10 2016-09-22 http://stackoverflow.com/questions/26684317/angularjs-ng-bind-to-specific-array-element
+스노우볼 하러 간다. 빠빠이
 
 
 
@@ -171,3 +170,13 @@ _할 수 있다면 만다라트 쓰는방법 소개도ㅋㅋㅋㅋㅋ
 _새 만다라트 버튼 마우스 오버 시, 버킷리스트>목표들 or 새 만다라트
 버킷리스트>목표들에는 버킷리스트들의 목표들이 있음
 _버킷리스트의 목표를 추가했다면 해당 사진을 상단바에서 보여줌
+
+
+xeditable -> derail-edit div 클릭시에는 전송하지 않게, 마우스 안 먹히게
+xeditable 클릭이 안됨. 클릭할때마다 append되는 문제 해결 필요.
+색깔을 선택했을 때 채도는 어떻게 맞춤?
+각 칸마다 퍼센트를 입력하지 않았다면?? --> 도장의 필요성
+
+처음에는 기존의 만다라트와 같이 색깔 배정, 대신 매우 옅은 색으로
+2,3차 목푱
+선택한 rgb와 날짜값은 각 td에 저장
