@@ -277,5 +277,4 @@ app.controller('Ctrl', function($scope, $filter) {
 	}];
 	$scope.contents[1].mandal_col2 = $scope.contents[3].mandal_col4;
 	// $scope.contents[1].mandal_col5 = $scope.contents[3].mandal_col5;
-
 });

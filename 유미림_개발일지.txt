@@ -126,6 +126,8 @@ eidt div xeditable 수정할때마다 나오기
 오후 10:10 2016-09-22 http://stackoverflow.com/questions/26684317/angularjs-ng-bind-to-specific-array-element
 스노우볼 하러 간다. 빠빠이
 
+오후 9:22 2016-10-16 ㅅㅈ!
+
 
 
 GOAL____
