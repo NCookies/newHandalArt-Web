@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" class="">
+
+<head>
+	<meta charset="utf-8" />
+	<title>한다라트 버리고 만다라트라도</title>
+	<link href="../../_start/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../css/mandal.css" rel="stylesheet" type="text/css" />	
+</head>
+
+<body quick-markup_injected="true" ng-controller="Ctrl">
+	<!-- BEGIN TOPBAR -->
+	<div class="topbar navbar-fixed-top">
+		<a class="topbar-logo" target="_blank">MANDALART</a>
+
+		<a class="topbar-purchase" data-hint="tooltip" data-original-title="데이터 시각화" data-placement="bottom" href="mypage.html" target="_blank"
+			role="button">MY PAGE</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="달력 설명" data-placement="bottom" href="calendar.html" target="_blank"
+			role="button">CALENDAR</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="만다라트 설명" data-placement="bottom" href="mandal.html" target="_blank"
+			role="button">MANDALART</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="버킷리스트 설명" data-placement="bottom" href="bucket.html" target="_blank"
+			role="button">BUCKET LIST</a>
+	</div>
+	<!-- END TOPBAR -->
+
+	<div class="mandal-container">
+		<div class="mandal-view">
+			<div class="view-search">
+				<input st-search="" class="form-control" placeholder="만다라트 검색" type="text" />
+			</div>
+			<div class="view-box">
+				<div class="box-object">
+					<div class="box-title">
+						{{ user.title || contents[4].mandal_col5 }}
+					</div>
+					<div class="box-date">
+						{{ user.desc }}
+					</div>
+					<div class="box-content">
+						해당 만다라트의 세부내용을 입력해주세요.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mandal-mandal">
+			<div class="color-picker"></div>
+			<div class="mandal-table">
+				<h1 class="title" href="#" editable-text="user.title" ng-model="user.title">{{ user.title || '만다라트 이름' }}</h1>
+				<h2 class="description" href="#" editable-textarea="user.desc" e-rows="2" e-cols="50" ng-model="user.desc">
+					<pre>{{ user.desc || '해당 만다라트의 세부내용을 입력해주세요.' }}</pre>
+				</h2>
+				<div class="mandal-mandal-detail-edit"></div>
+				<table class="table table-bordered">
+					<tbody>
+						<tr ng-repeat="row in contents">
+							<td><a href="#" editable-text="row.mandal_col1" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col1 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col2" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col2 || '쓰기' }}</a></td>
+							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col3" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col3 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col4" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col4 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col5" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col5 || '쓰기' }}</a></td>
+							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col6" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col6 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col7" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col7 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col8" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col8 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col9" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col9 || '쓰기' }}</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="../../_start/plugins/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="../../_start/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src='../../_start/plugins/angular.min.js'></script>	  
+	<script src='../../_start/plugins/xeditable.js'></script>	 	
+	<script src="../js/mandal.js" type="text/javascript"></script>
+	<script>
+			$(document).ready(function(){
+				$('[data-hint="tooltip"]').tooltip({
+					container: 'body'
+				})
+			});
+		</script>
+</body>
+
+</html>

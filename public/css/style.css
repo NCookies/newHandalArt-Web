@@ -1,0 +1,91 @@
+/* General Stylesheet */
+body {
+    font-family: "Roboto", sans-serif;   
+}
+
+a[href]:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
+/* Bootstrap Container */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Predefined Helper Classes */
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+/* Topbar */
+.topbar {
+    background: #f3f3f3;
+}
+
+.topbar:before,
+.topbar:after {
+    display: block;
+    content: " ";
+}
+
+.topbar:after {
+    clear: both;
+}
+
+.topbar .topbar-logo {
+    display: inline-block;
+    float: left;
+    padding: 25px 20px;
+    vertical-align: middle;
+}
+
+.topbar .topbar-logo img {
+    vertical-align: middle;
+}
+
+.topbar .topbar-link,
+.topbar .topbar-purchase {
+    display: inline-block;
+    float: right;
+    font-size: 13px;
+    color: #424242;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 16px;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+
+.topbar .topbar-link:hover,
+.topbar .topbar-purchase:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.topbar .topbar-purchase {    
+    background: #d2d2d2;
+    padding: 12px 20px;
+    margin-top: 14px;
+    margin-left: 45px;
+    margin-right: 45px;
+    font-size: 13px;
+    color: #424242;
+}
+
+.topbar .topbar-purchase:hover {
+
+}
+
+.topbar .topbar-sep {
+    height: 70px;
+    width: 1px;
+    display: inline-block;
+    float: right;
+    border-left: 1px solid #e0e0e6;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+	<meta charset="utf-8" />
+	<title>한다라트 버리고 만다라트라도</title>
+	<link href="../../_start/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../../_start/plugins/fullcalendar.min.css" rel="stylesheet"/>
+	<link href="../css/calendar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body quick-markup_injected="true">
+	<!-- BEGIN TOPBAR -->
+	<div class="topbar navbar-fixed-top">
+		<a class="topbar-logo" target="_blank">MANDALART</a>
+
+		<a class="topbar-purchase" data-hint="tooltip" data-original-title="데이터 시각화" data-placement="bottom" href="mypage.html" target="_blank"
+			role="button">MY PAGE</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="달력 설명" data-placement="bottom" href="calendar.html" target="_blank"
+			role="button">CALENDAR</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="만다라트 설명" data-placement="bottom" href="mandal.html" target="_blank"
+			role="button">MANDALART</a>
+
+		<span class="topbar-sep"></span>
+		<a class="topbar-link" data-hint="tooltip" data-original-title="버킷리스트 설명" data-placement="bottom" href="bucket.html" target="_blank"
+			role="button">BUCKET LIST</a>
+	</div>
+	<!-- END TOPBAR -->
+
+	<div id='calendar' style="margin: 100px 20px 0px 20px;"></div>
+	<svg id="graph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<foreignobject id="percentage" x="240" y="230"></foreignobject>
+	</svg>
+
+	<div class="modal fade" id="createModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">일정</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						<label>Event title</label><br/>
+						<input type="text" id="title" class="span10" maxlength="10">
+						<input type="text" id="title" class="span10">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="save">save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="remove">remove</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../_start/plugins/jquery-1.11.0.min.js"></script>
+	<script src="../../_start/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+	<script src="../../_start/plugins/d3.min.js"></script>
+	<script src="../../_start/plugins/moment.min.js"></script>
+	<script src="../../_start/plugins/fullcalendar.js"></script>
+	<script src="../../_start/plugins/modal.js"></script>
+	<script src="../js/calendar.js" type="text/javascript"></script>
+</body>
+
+</html>

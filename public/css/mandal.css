@@ -1,0 +1,76 @@
+.mandal-container {
+  height: 100%;
+  background-color: dodgerblue;
+}
+
+.mandal-view {
+  float: left;
+  height: auto;
+  width: 250px;
+  margin-top: 80px;
+}
+
+.view-search {
+  width: 100%;
+  height: 30px;
+  background-color: blueviolet;
+}
+
+.view-box {
+  width: inherit;
+  height: 78vh;
+  padding-top: 20px;
+  padding-left: 30px;
+  word-break: keep-all;
+  overflow-y: scroll;
+}
+
+.box-title {
+  font-size: 2em;
+}
+.mandal-mandal {
+  float: right;
+  width: calc(100% - 250px);
+  margin-top: 50px;
+  font: 1em/1 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.mandal-table {
+  margin: 25px 20px 0 20px;
+}
+.table table-bordered{
+  height: 100%;
+}
+td {
+  text-align: center;
+}
+
+tr:nth-child(3n) {
+  border-bottom: 3px solid black;
+}
+tr:last-child {
+  border-bottom: none;
+}
+
+.title {
+  margin: 0 0 6px;
+  color: #548383;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+.description {
+  margin: 0 0 20px;
+  color: #acc2c2;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+div[ng-app] { margin: 50px; }
+
+.mandal-mandal-detail-edit p {
+  text-align: center;
+  margin-bottom: 0;
+}
