@@ -1,1 +1,12 @@
-http://plnkr.co/edit/yZyxzACNtXEA661sy0K3?p=preview
+오후 10:18 2016-11-17
+// xeditable에서 저장 전 실행되는 함수
+onbeforesave="update($data, $index, 0)"
+//변수로 속성 접근, dd에 mandal_col+"number"유동적
+console.log($scope.contents[column][dd]);
+
+3차 목표와 2차 목표 바인딩
+1,1 = 3,3 / 1,4 = 3,4 / 1,7 = 3,5
+4,1 = 4,3 / 4,7 = 4,5
+7,1 = 5,3 / 7,4 = 5,4 / 7,7 = 5,5
+
+1->3 / 4->4 / 5->7 역으로도 실행

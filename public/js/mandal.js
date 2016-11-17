@@ -78,53 +78,24 @@ app.controller('Ctrl', function($scope, $filter) {
 	}];
 
 	$scope.update = function(data, column, filed) {
-		// index는 0부터 시작하는 세로줄
-		// 가로줄의 인덱스는 어떻게 알지?
-		// 만다라트의 최종목표 테이블의 중간목표와 세부목표의 중간목표를 같게 바꿈
-		if(column == 1) {
-			switch (filed) {
-				case 1:
-//					console.log($scope.contents[column][dd]);
-					$scope.contents[3].mandal_col3 = data;
-					$scope.contents[1].mandal_col1 = data;
-					break;
-				case 4:
-					$scope.contents[3].mandal_col4 = data;
-					$scope.contents[1].mandal_col4 = data;
-					break;
-				case 7:
-					$scope.contents[3].mandal_col5 = data;
-					$scope.contents[1].mandal_col7 = data;
-					break;
-			}
-		}
-		else if(column == 4) {
-			switch (filed) {
-				case 1:
-					$scope.contents[4].mandal_col3 = data;
-					$scope.contents[4].mandal_col1 = data;
-					break;
-				case 7:
-					$scope.contents[4].mandal_col5 = data;
-					$scope.contents[4].mandal_col7 = data;
-					break;
-			}
-		}
-		else if(column == 7) {
-		switch (filed) {
-			case 1:
-				$scope.contents[5].mandal_col3 = data;
-				$scope.contents[7].mandal_col1 = data;
-				break;
-			case 4:
-				$scope.contents[5].mandal_col4 = data;
-				$scope.contents[7].mandal_col4 = data;
-				break;
-			case 7:
-				$scope.contents[5].mandal_col5 = data;
-				$scope.contents[7].mandal_col7 = data;
-				break;
-			}
-		}
+		// 최종목표 테이블의 중간목표와 세부목표의 중간목표를 같게 바꿈
+		var x = column;
+		var y = filed;
+
+		x = trans(x);
+		y = trans(y);
+		y = "mandal_col" + y;
+		$scope.contents[x][y] = data;
 	};
+
+	function trans(number) {
+		// 1->3, 4->4, 5->7 그리고 역순으로 바꿈
+		switch (number) {
+			case 1: number = 3; break;
+			case 3: number = 1; break;
+			case 5: number = 7; break;
+			case 7: number = 5; break;
+		}
+		return number;
+	}
 });
