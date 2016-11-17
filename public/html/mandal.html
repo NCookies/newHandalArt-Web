@@ -50,27 +50,25 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="mandal-mandal">
-			<div class="color-picker"></div>
 			<div class="mandal-table">
-				<h1 class="title" href="#" editable-text="user.title" ng-model="user.title">{{ user.title || '만다라트 이름' }}</h1>
-				<h2 class="description" href="#" editable-textarea="user.desc" e-rows="2" e-cols="50" ng-model="user.desc">
+				<h1 class="title" href="#" editable-text="user.title" ng-model="mandals.title">{{ user.title || '만다라트 이름' }}</h1>
+				<h2 class="description" href="#" editable-textarea="mandals.desc" e-rows="2" e-cols="50" ng-model="user.desc">
 					<pre>{{ user.desc || '해당 만다라트의 세부내용을 입력해주세요.' }}</pre>
 				</h2>
 				<div class="mandal-mandal-detail-edit"></div>
 				<table class="table table-bordered">
 					<tbody>
 						<tr ng-repeat="row in contents">
-							<td><a href="#" editable-text="row.mandal_col1" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col1 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col2" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col2 || '쓰기' }}</a></td>
-							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col3" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col3 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col4" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col4 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col5" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col5 || '쓰기' }}</a></td>
-							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col6" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col6 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col7" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col7 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col8" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col8 || '쓰기' }}</a></td>
-							<td><a href="#" editable-text="row.mandal_col9" data-e-style="width:90px; height:28px;" class="xeditable_text">{{ row.mandal_col9 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col0" onbeforesave="update($data, $index, 0)" class="xeditable_text">{{ row.mandal_col0 || $index }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col1" onbeforesave="update($data, $index, 1)" class="xeditable_text">{{ row.mandal_col1 || '쓰기' }}</a></td>
+							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col2" onbeforesave="update($data, $index, 2)" class="xeditable_text">{{ row.mandal_col2 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col3" onbeforesave="update($data, $index, 3)" class="xeditable_text">{{ row.mandal_col3 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col4" onbeforesave="update($data, $index, 4)" class="xeditable_text">{{ row.mandal_col4 || '쓰기' }}</a></td>
+							<td style="border-right: 3px solid black;"><a href="#" editable-text="row.mandal_col5" onbeforesave="update($data, $index, 5)" class="xeditable_text">{{ row.mandal_col5 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col6" onbeforesave="update($data, $index, 6)" class="xeditable_text">{{ row.mandal_col6 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col7" onbeforesave="update($data, $index, 7)" class="xeditable_text">{{ row.mandal_col7 || '쓰기' }}</a></td>
+							<td><a href="#" editable-text="row.mandal_col8" onbeforesave="update($data, $index, 8)" class="xeditable_text">{{ row.mandal_col8 || $index }}</a></td>
 						</tr>
 					</tbody>
 				</table>
