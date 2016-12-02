@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'BM-hana';
+    src: url('../fonts/BMHANNA_11yrs_ttf.ttf');
+}
+
+#addBucket{
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    background-color: orange;
+    border-radius: 50%;
+    bottom: 3rem;
+    right: 4rem;
+}
+
+.plus{
+    height: 10%;
+    width: 4.44rem;
+    background-color: white;
+    position: relative;
+    left: 13%;
+    top: 47%;
+}
+#plus-vertical{
+    transform: rotate(90deg);
+    top: 35%;
+}
+
+h1{
+    font-family: 'BM-hana'
+}
+#addBucket:hover{
+    bottom : 3.2rem;
+    right : 4.2rem;
+    box-shadow: 1px 5px 5px gray;
+    cursor: pointer;
+}
+
+#addModal{
+    text-align: center;
+    font-family: 'BM-hana';
+}
+
+#addModal .modal-body{
+    height: 30vh;
+}
+
+#addModal .modal-body input{
+    width: 60%;
+    height: 5vh;
+    font-size: 25px;
+    margin-top: 5%
+}
+
+#addModal .modal-footer button{
+    font-size: 30px;
+    border-radius: 10%;
+    height: 5vh;
+    width: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
