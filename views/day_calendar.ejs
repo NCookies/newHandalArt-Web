@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = utf-8>
+    <title>sample</title>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/day_calendar.css"/>
+</head>
+
+<body>
+<svg id="graph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+    <foreignobject id="percentage" x="240" y="230">
+    </foreignobject>
+</svg>
+<div class="modal fade" id="createModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">일정</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <label>Event title</label><br/>
+                    <input type = "text" id = "title" class = "span10">
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type = "button" class="btn btn-primary" data-dismiss="modal" id="save">save</button>
+                <button type = "button" class="btn btn-default" data-dismiss="modal" id="remove">remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src = "/js/day_calendar.js"></script>
+</body>
+</html>

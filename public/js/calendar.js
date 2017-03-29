@@ -287,6 +287,7 @@ $(document).ready(function(eventData)
     }
 
 	$(".fc-button-agendaDay").on('click', function() {
+		alert("Dd");
 		var eventsArray = JSON.stringify((calendar.fullCalendar('clientEvents').map(function(e) {
 			return {
 				start: e.start,
